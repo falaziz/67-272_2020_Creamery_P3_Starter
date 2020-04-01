@@ -16684,3 +16684,510 @@ D, [2020-03-14T12:17:00.099900 #2689] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[
 D, [2020-03-14T12:17:00.100551 #2689] DEBUG -- :   [1m[36mStore Destroy (0.1ms)[0m  [1m[31mDELETE FROM "stores" WHERE "stores"."id" = ?[0m  [["id", 2]]
 D, [2020-03-14T12:17:00.101154 #2689] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
 D, [2020-03-14T12:17:00.101758 #2689] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.165520 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T22:46:19.253207 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.253635 #8678]  INFO -- : -------------------------------------------------------------------------
+I, [2020-04-01T22:46:19.253676 #8678]  INFO -- : AssignmentsControllerTest: test_should_create_assignment_when_appropriate
+I, [2020-04-01T22:46:19.253698 #8678]  INFO -- : -------------------------------------------------------------------------
+D, [2020-04-01T22:46:19.412942 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.414640 #8678] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.416080 #8678] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "4620496171"], ["active", 1]]
+D, [2020-04-01T22:46:19.417251 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.430595 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.433100 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "147445584"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.434388 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "147445584"], ["date_of_birth", "2001-04-01"], ["phone", "5664425610"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.435489 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.451429 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.452787 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.454605 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.455941 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.463541 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.464517 #8678] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.465272 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.466042 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:46:19.467068 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.468163 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "111123874"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.469258 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Fred"], ["last_name", "Gruberman"], ["ssn", "111123874"], ["date_of_birth", "2001-04-01"], ["phone", "2879264571"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.470379 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.471398 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.517954 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.518246 #8678]  INFO -- : -------------------------------------------------------------------------------
+I, [2020-04-01T22:46:19.518284 #8678]  INFO -- : AssignmentsControllerTest: test_should_not_create_assignment_when_inappropriate
+I, [2020-04-01T22:46:19.518319 #8678]  INFO -- : -------------------------------------------------------------------------------
+D, [2020-04-01T22:46:19.518925 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.520090 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.521293 #8678] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "8098601556"], ["active", 1]]
+D, [2020-04-01T22:46:19.522431 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.523411 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.524522 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "020462583"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.525663 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "020462583"], ["date_of_birth", "2001-04-01"], ["phone", "7031503151"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.526870 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.527886 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.528925 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.529912 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.530848 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.532100 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.533063 #8678] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.533885 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.534686 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.585870 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.586179 #8678]  INFO -- : -----------------------------------------------------------------------------------------
+I, [2020-04-01T22:46:19.586216 #8678]  INFO -- : AssignmentsControllerTest: test_should_not_have_the_ability_to_edit_or_update_assignments
+I, [2020-04-01T22:46:19.586237 #8678]  INFO -- : -----------------------------------------------------------------------------------------
+D, [2020-04-01T22:46:19.586813 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.587924 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.589098 #8678] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7719937389"], ["active", 1]]
+D, [2020-04-01T22:46:19.590112 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.591392 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.592462 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "037224305"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.593541 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "037224305"], ["date_of_birth", "2001-04-01"], ["phone", "8004608383"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.594742 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.595753 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.596750 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.597671 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.598533 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.599803 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.600761 #8678] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.601547 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:46:19.604701 #8678]  INFO -- : Started GET "/assignment/1/edit" for 127.0.0.1 at 2020-04-01 22:46:19 +0000
+F, [2020-04-01T22:46:19.623580 #8678] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:55:in `block in <class:AssignmentsControllerTest>'
+
+I, [2020-04-01T22:46:19.629453 #8678]  INFO -- : Started PATCH "/assignment/1" for 127.0.0.1 at 2020-04-01 22:46:19 +0000
+F, [2020-04-01T22:46:19.639977 #8678] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:57:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:46:19.643435 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.644234 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.644534 #8678]  INFO -- : ----------------------------------------------
+I, [2020-04-01T22:46:19.644609 #8678]  INFO -- : AssignmentsControllerTest: test_should_get_new
+I, [2020-04-01T22:46:19.644669 #8678]  INFO -- : ----------------------------------------------
+D, [2020-04-01T22:46:19.645594 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.647154 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.648740 #8678] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3400237079"], ["active", 1]]
+D, [2020-04-01T22:46:19.650056 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.651318 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.652688 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "194670051"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.654508 #8678] DEBUG -- :   [1m[36mEmployee Create (0.5ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "194670051"], ["date_of_birth", "2001-04-01"], ["phone", "5165553541"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.655770 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.657025 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.658327 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.659540 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.660660 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.662187 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.664143 #8678] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.665130 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:46:19.666380 #8678]  INFO -- : Started GET "/assignment/new" for 127.0.0.1 at 2020-04-01 22:46:19 +0000
+F, [2020-04-01T22:46:19.676577 #8678] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:18:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:46:19.680105 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.681041 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.681340 #8678]  INFO -- : --------------------------------------------------------------------------
+I, [2020-04-01T22:46:19.681422 #8678]  INFO -- : AssignmentsControllerTest: test_should_destroy_assignment_when_appropriate
+I, [2020-04-01T22:46:19.681484 #8678]  INFO -- : --------------------------------------------------------------------------
+D, [2020-04-01T22:46:19.682381 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.683926 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.685427 #8678] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "5685881061"], ["active", 1]]
+D, [2020-04-01T22:46:19.686792 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.687970 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.689331 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "169941357"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.690701 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "169941357"], ["date_of_birth", "2001-04-01"], ["phone", "3513458944"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.692045 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.693372 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.694647 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.695839 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.696963 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.698493 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.699748 #8678] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.700810 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.701718 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+I, [2020-04-01T22:46:19.702892 #8678]  INFO -- : Started DELETE "/assignment/1" for 127.0.0.1 at 2020-04-01 22:46:19 +0000
+F, [2020-04-01T22:46:19.714202 #8678] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:48:in `block (2 levels) in <class:AssignmentsControllerTest>'
+  test/controllers/assignments_controller_test.rb:47:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:46:19.718241 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:46:19.719485 #8678] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.720502 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.720828 #8678]  INFO -- : ------------------------------------------------
+I, [2020-04-01T22:46:19.720903 #8678]  INFO -- : AssignmentsControllerTest: test_should_get_index
+I, [2020-04-01T22:46:19.720963 #8678]  INFO -- : ------------------------------------------------
+D, [2020-04-01T22:46:19.721860 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.723338 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.724876 #8678] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "5369664730"], ["active", 1]]
+D, [2020-04-01T22:46:19.726273 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.728607 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.730199 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "201601709"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.731767 #8678] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "201601709"], ["date_of_birth", "2001-04-01"], ["phone", "6104439087"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.733254 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.734748 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.736123 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.737335 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.738520 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.740084 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.741349 #8678] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.742433 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.743380 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:46:19.797376 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:46:19.797766 #8678]  INFO -- : -----------------------------------------------------------
+I, [2020-04-01T22:46:19.797841 #8678]  INFO -- : AssignmentsControllerTest: test_should_terminate_assignment
+I, [2020-04-01T22:46:19.797901 #8678]  INFO -- : -----------------------------------------------------------
+D, [2020-04-01T22:46:19.798832 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.800249 #8678] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.801786 #8678] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "1434826025"], ["active", 1]]
+D, [2020-04-01T22:46:19.803108 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.804334 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.805706 #8678] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "176184448"], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.807089 #8678] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "176184448"], ["date_of_birth", "2001-04-01"], ["phone", "4561660682"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:46:19.808384 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.809587 #8678] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.810830 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.811945 #8678] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:46:19.813029 #8678] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.814565 #8678] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:46:19.815805 #8678] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:46:19.816940 #8678] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:46:19.817837 #8678] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.404738 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T22:48:24.537176 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.537554 #8924]  INFO -- : -------------------------------------------------------------------------
+I, [2020-04-01T22:48:24.537593 #8924]  INFO -- : AssignmentsControllerTest: test_should_create_assignment_when_appropriate
+I, [2020-04-01T22:48:24.537618 #8924]  INFO -- : -------------------------------------------------------------------------
+D, [2020-04-01T22:48:24.627454 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.629187 #8924] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.630677 #8924] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7385043184"], ["active", 1]]
+D, [2020-04-01T22:48:24.631803 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.645166 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.647551 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "021248778"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.648829 #8924] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "021248778"], ["date_of_birth", "2001-04-01"], ["phone", "4109572882"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.649910 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.665443 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.666903 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.668801 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.670156 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.677816 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.678843 #8924] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.679698 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.680493 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:48:24.681490 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.682636 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "060096923"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.683727 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Fred"], ["last_name", "Gruberman"], ["ssn", "060096923"], ["date_of_birth", "2001-04-01"], ["phone", "1027492118"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.684804 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.685761 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.740617 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.740984 #8924]  INFO -- : --------------------------------------------------------------------------
+I, [2020-04-01T22:48:24.741023 #8924]  INFO -- : AssignmentsControllerTest: test_should_destroy_assignment_when_appropriate
+I, [2020-04-01T22:48:24.741045 #8924]  INFO -- : --------------------------------------------------------------------------
+D, [2020-04-01T22:48:24.741643 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.742913 #8924] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.744177 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3522026374"], ["active", 1]]
+D, [2020-04-01T22:48:24.745220 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.746196 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.747350 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "007142838"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.748428 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "007142838"], ["date_of_birth", "2001-04-01"], ["phone", "7546739281"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.749517 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.750556 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.751547 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.752471 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.753380 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.754928 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.755887 #8924] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.756652 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.757356 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+I, [2020-04-01T22:48:24.759933 #8924]  INFO -- : Started DELETE "/assignment/1" for 127.0.0.1 at 2020-04-01 22:48:24 +0000
+F, [2020-04-01T22:48:24.778243 #8924] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:48:in `block (2 levels) in <class:AssignmentsControllerTest>'
+  test/controllers/assignments_controller_test.rb:47:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:48:24.783380 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:48:24.784268 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.785263 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.785553 #8924]  INFO -- : ----------------------------------------------
+I, [2020-04-01T22:48:24.785626 #8924]  INFO -- : AssignmentsControllerTest: test_should_get_new
+I, [2020-04-01T22:48:24.785700 #8924]  INFO -- : ----------------------------------------------
+D, [2020-04-01T22:48:24.786489 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.787802 #8924] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.789222 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "6452297486"], ["active", 1]]
+D, [2020-04-01T22:48:24.790496 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.791619 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.792978 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "092940194"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.794309 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "092940194"], ["date_of_birth", "2001-04-01"], ["phone", "2312478736"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.795605 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.796862 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.798079 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.799241 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.800653 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.802145 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.803353 #8924] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.804356 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:48:24.805542 #8924]  INFO -- : Started GET "/assignment/new" for 127.0.0.1 at 2020-04-01 22:48:24 +0000
+F, [2020-04-01T22:48:24.816972 #8924] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:18:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:48:24.821151 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.822116 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.822411 #8924]  INFO -- : -----------------------------------------------------------
+I, [2020-04-01T22:48:24.822508 #8924]  INFO -- : AssignmentsControllerTest: test_should_terminate_assignment
+I, [2020-04-01T22:48:24.822574 #8924]  INFO -- : -----------------------------------------------------------
+D, [2020-04-01T22:48:24.823383 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.824722 #8924] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.826154 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "4603371916"], ["active", 1]]
+D, [2020-04-01T22:48:24.827459 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.828630 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.830020 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "362165432"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.831504 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "362165432"], ["date_of_birth", "2001-04-01"], ["phone", "3049197048"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.832827 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.834056 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.835356 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.836512 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.837623 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.839169 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.840392 #8924] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.841385 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.842226 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.871699 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.872038 #8924]  INFO -- : ------------------------------------------------
+I, [2020-04-01T22:48:24.872118 #8924]  INFO -- : AssignmentsControllerTest: test_should_get_index
+I, [2020-04-01T22:48:24.872224 #8924]  INFO -- : ------------------------------------------------
+D, [2020-04-01T22:48:24.872982 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.874282 #8924] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.875779 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3129731187"], ["active", 1]]
+D, [2020-04-01T22:48:24.877189 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.878368 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.879786 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "381024122"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.881359 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "381024122"], ["date_of_birth", "2001-04-01"], ["phone", "3955714600"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.882770 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.884045 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.885280 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.886422 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.887592 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.889112 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.890326 #8924] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.891396 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.892281 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:24.943121 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:24.943458 #8924]  INFO -- : -------------------------------------------------------------------------------
+I, [2020-04-01T22:48:24.943539 #8924]  INFO -- : AssignmentsControllerTest: test_should_not_create_assignment_when_inappropriate
+I, [2020-04-01T22:48:24.943602 #8924]  INFO -- : -------------------------------------------------------------------------------
+D, [2020-04-01T22:48:24.944393 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.945740 #8924] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.947204 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7123079510"], ["active", 1]]
+D, [2020-04-01T22:48:24.948480 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.949634 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.951028 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "091793814"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.952378 #8924] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "091793814"], ["date_of_birth", "2001-04-01"], ["phone", "6486754925"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:24.953651 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.954905 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.956157 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.957286 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:24.958395 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.959961 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:24.961188 #8924] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:24.966840 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:24.967851 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:48:25.019257 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:48:25.019753 #8924]  INFO -- : -----------------------------------------------------------------------------------------
+I, [2020-04-01T22:48:25.019832 #8924]  INFO -- : AssignmentsControllerTest: test_should_not_have_the_ability_to_edit_or_update_assignments
+I, [2020-04-01T22:48:25.019896 #8924]  INFO -- : -----------------------------------------------------------------------------------------
+D, [2020-04-01T22:48:25.020874 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:25.022386 #8924] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:25.024045 #8924] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "8434378933"], ["active", 1]]
+D, [2020-04-01T22:48:25.025562 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:25.026892 #8924] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:25.028321 #8924] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "137386013"], ["LIMIT", 1]]
+D, [2020-04-01T22:48:25.029839 #8924] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "137386013"], ["date_of_birth", "2001-04-01"], ["phone", "0680324667"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:48:25.031443 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:25.032785 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:48:25.034047 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:25.035270 #8924] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:48:25.036440 #8924] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:25.038085 #8924] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:48:25.039504 #8924] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:48:25.040677 #8924] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:48:25.042020 #8924]  INFO -- : Started GET "/assignment/1/edit" for 127.0.0.1 at 2020-04-01 22:48:25 +0000
+F, [2020-04-01T22:48:25.055557 #8924] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:55:in `block in <class:AssignmentsControllerTest>'
+
+I, [2020-04-01T22:48:25.060060 #8924]  INFO -- : Started PATCH "/assignment/1" for 127.0.0.1 at 2020-04-01 22:48:25 +0000
+F, [2020-04-01T22:48:25.073960 #8924] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:57:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:48:25.079940 #8924] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.017380 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T22:49:18.128736 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.129113 #9026]  INFO -- : ------------------------------------------------
+I, [2020-04-01T22:49:18.129152 #9026]  INFO -- : AssignmentsControllerTest: test_should_get_index
+I, [2020-04-01T22:49:18.129175 #9026]  INFO -- : ------------------------------------------------
+D, [2020-04-01T22:49:18.217876 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.219609 #9026] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.221141 #9026] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7794178312"], ["active", 1]]
+D, [2020-04-01T22:49:18.222256 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.235522 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.237869 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "234825005"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.239148 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "234825005"], ["date_of_birth", "2001-04-01"], ["phone", "4144184375"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.240250 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.255769 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.257173 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.259011 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.260327 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.267979 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.268962 #9026] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.269782 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.270806 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.326961 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.327295 #9026]  INFO -- : -----------------------------------------------------------
+I, [2020-04-01T22:49:18.327331 #9026]  INFO -- : AssignmentsControllerTest: test_should_terminate_assignment
+I, [2020-04-01T22:49:18.327353 #9026]  INFO -- : -----------------------------------------------------------
+D, [2020-04-01T22:49:18.328004 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.329261 #9026] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.330563 #9026] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3306546592"], ["active", 1]]
+D, [2020-04-01T22:49:18.331626 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.332679 #9026] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.333849 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "157358140"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.335014 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "157358140"], ["date_of_birth", "2001-04-01"], ["phone", "9819701239"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.336051 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.337072 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.338097 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.339001 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.339890 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.341169 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.342153 #9026] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.342971 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.343740 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.370492 #9026] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.370818 #9026]  INFO -- : -------------------------------------------------------------------------
+I, [2020-04-01T22:49:18.370857 #9026]  INFO -- : AssignmentsControllerTest: test_should_create_assignment_when_appropriate
+I, [2020-04-01T22:49:18.370880 #9026]  INFO -- : -------------------------------------------------------------------------
+D, [2020-04-01T22:49:18.371405 #9026] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.372398 #9026] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.373542 #9026] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7854601886"], ["active", 1]]
+D, [2020-04-01T22:49:18.374654 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.375565 #9026] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.376660 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "032290293"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.377788 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "032290293"], ["date_of_birth", "2001-04-01"], ["phone", "9349180134"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.378873 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.379832 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.380773 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.381638 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.382580 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.383830 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.384762 #9026] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.385511 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.386266 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:49:18.387204 #9026] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.388274 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "109839286"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.389327 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Fred"], ["last_name", "Gruberman"], ["ssn", "109839286"], ["date_of_birth", "2001-04-01"], ["phone", "6378474838"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.390346 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.391104 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.435789 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.436075 #9026]  INFO -- : -------------------------------------------------------------------------------
+I, [2020-04-01T22:49:18.436112 #9026]  INFO -- : AssignmentsControllerTest: test_should_not_create_assignment_when_inappropriate
+I, [2020-04-01T22:49:18.436135 #9026]  INFO -- : -------------------------------------------------------------------------------
+D, [2020-04-01T22:49:18.436697 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.437718 #9026] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.438924 #9026] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "0400423756"], ["active", 1]]
+D, [2020-04-01T22:49:18.439991 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.440904 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.441990 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "004737536"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.443167 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "004737536"], ["date_of_birth", "2001-04-01"], ["phone", "7734573378"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.444229 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.445223 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.446248 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.447156 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.448015 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.449258 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.450197 #9026] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.451026 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.451828 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.502558 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.502883 #9026]  INFO -- : --------------------------------------------------------------------------
+I, [2020-04-01T22:49:18.502921 #9026]  INFO -- : AssignmentsControllerTest: test_should_destroy_assignment_when_appropriate
+I, [2020-04-01T22:49:18.502943 #9026]  INFO -- : --------------------------------------------------------------------------
+D, [2020-04-01T22:49:18.503551 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.504669 #9026] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.505875 #9026] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "0982119861"], ["active", 1]]
+D, [2020-04-01T22:49:18.506933 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.507868 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.508948 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "033413846"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.510031 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "033413846"], ["date_of_birth", "2001-04-01"], ["phone", "2520292225"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.511089 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.512076 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.513061 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.513986 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.514891 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.516115 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.517028 #9026] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.517792 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.518564 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+I, [2020-04-01T22:49:18.521087 #9026]  INFO -- : Started DELETE "/assignment/1" for 127.0.0.1 at 2020-04-01 22:49:18 +0000
+F, [2020-04-01T22:49:18.559597 #9026] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:48:in `block (2 levels) in <class:AssignmentsControllerTest>'
+  test/controllers/assignments_controller_test.rb:47:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:49:18.565788 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-01T22:49:18.566916 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.568056 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.568401 #9026]  INFO -- : ----------------------------------------------
+I, [2020-04-01T22:49:18.568486 #9026]  INFO -- : AssignmentsControllerTest: test_should_get_new
+I, [2020-04-01T22:49:18.568556 #9026]  INFO -- : ----------------------------------------------
+D, [2020-04-01T22:49:18.569437 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.570978 #9026] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.572741 #9026] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "0629815210"], ["active", 1]]
+D, [2020-04-01T22:49:18.574121 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.575516 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.577041 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "231043911"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.578572 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "231043911"], ["date_of_birth", "2001-04-01"], ["phone", "3619064507"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.580035 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.581365 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.582797 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.584054 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.585276 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.586985 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.588306 #9026] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.589381 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:49:18.595969 #9026]  INFO -- : Started GET "/assignment/new" for 127.0.0.1 at 2020-04-01 22:49:18 +0000
+F, [2020-04-01T22:49:18.609642 #9026] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:18:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:49:18.614809 #9026] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T22:49:18.615898 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T22:49:18.616327 #9026]  INFO -- : -----------------------------------------------------------------------------------------
+I, [2020-04-01T22:49:18.616410 #9026]  INFO -- : AssignmentsControllerTest: test_should_not_have_the_ability_to_edit_or_update_assignments
+I, [2020-04-01T22:49:18.616478 #9026]  INFO -- : -----------------------------------------------------------------------------------------
+D, [2020-04-01T22:49:18.617444 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.619136 #9026] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.621025 #9026] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "6642264144"], ["active", 1]]
+D, [2020-04-01T22:49:18.622814 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.624237 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.625868 #9026] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "330502548"], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.627541 #9026] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "330502548"], ["date_of_birth", "2001-04-01"], ["phone", "0436437570"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T22:49:18.629194 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.630761 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T22:49:18.632210 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.633655 #9026] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T22:49:18.635177 #9026] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.637148 #9026] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T22:49:18.638560 #9026] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T22:49:18.639805 #9026] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T22:49:18.641168 #9026]  INFO -- : Started GET "/assignment/1/edit" for 127.0.0.1 at 2020-04-01 22:49:18 +0000
+F, [2020-04-01T22:49:18.655165 #9026] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:55:in `block in <class:AssignmentsControllerTest>'
+
+I, [2020-04-01T22:49:18.660046 #9026]  INFO -- : Started PATCH "/assignment/1" for 127.0.0.1 at 2020-04-01 22:49:18 +0000
+F, [2020-04-01T22:49:18.675514 #9026] FATAL -- : 
+NameError - uninitialized constant AssignmentController:
+  test/controllers/assignments_controller_test.rb:57:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-01T22:49:18.685321 #9026] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
