@@ -19,7 +19,7 @@ class AssignmentsController < ApplicationController
     def create
         @assignment = Assignment.new(assignment_params)
         if @assignment.save
-            redirect_to assignment_path(@assignment), notice: "#{@assignment.name} was added to the system."
+            redirect_to assignment_path(@assignment), notice: "#Succesfully added the assignment."
         else
             render action: 'new'
         end
@@ -31,7 +31,7 @@ class AssignmentsController < ApplicationController
     
     def update
         if @assignment.update
-            redirect_to assignment_path(@assignment), notice: "#{@assignment.name} was revised in the system."
+            redirect_to assignment_path(@assignment), notice: "Assignment was revised in the system."
         else
             render action: 'edit'
         end
@@ -39,7 +39,7 @@ class AssignmentsController < ApplicationController
     
     def destroy
         @assignment.destroy
-        redirect_to assignments_url
+        redirect_to assignments_url, notice: "Removed assignment from the system."
     end
     
     private
