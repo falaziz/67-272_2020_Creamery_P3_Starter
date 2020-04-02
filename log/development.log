@@ -1530,3 +1530,1170 @@ I, [2020-04-02T14:44:09.414602 #28220]  INFO -- :   Rendered partials/_footer.ht
 I, [2020-04-02T14:44:09.494846 #28220]  INFO -- : Completed 200 OK in 108ms (Views: 103.0ms | ActiveRecord: 0.8ms)
 
 
+I, [2020-04-02T15:00:55.544692 #501]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 15:00:55 +0000
+D, [2020-04-02T15:00:55.560887 #501] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T15:00:55.561059 #501] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:00:55.571808 #501]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:00:55.589675 #501]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:00:55.594357 #501] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:00:55.594807 #501] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:00:55.606757 #501] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:00:55.607207 #501] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:00:55.746271 #501]  INFO -- :   Rendered employees/index.html.erb within layouts/application (156.2ms)
+I, [2020-04-02T15:00:55.965148 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T15:00:56.076510 #501]  INFO -- : Completed 200 OK in 504ms (Views: 487.2ms | ActiveRecord: 1.4ms)
+
+
+I, [2020-04-02T15:00:58.864153 #501]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:00:58 +0000
+I, [2020-04-02T15:00:58.867219 #501]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:00:58.875800 #501]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T15:00:58.877104 #501]  INFO -- :   Rendered stores/index.html.erb within layouts/application (1.0ms)
+I, [2020-04-02T15:00:58.878402 #501]  INFO -- : Completed 500  in 11ms (ActiveRecord: 0.4ms)
+
+
+F, [2020-04-02T15:00:58.906559 #501] FATAL -- : 
+SyntaxError - syntax error, unexpected ',', expecting ')'
+...#{store.city}, #{store.state}",  );@output_buffer.safe_appen...
+...                              ^
+/home/ubuntu/P3/app/views/stores/index.html.erb:20: syntax error, unexpected `end', expecting ')'
+'.freeze; end 
+          ^~~
+/home/ubuntu/P3/app/views/stores/index.html.erb:34: syntax error, unexpected `ensure', expecting ')'
+          ensure
+          ^~~~~~
+/home/ubuntu/P3/app/views/stores/index.html.erb:36: syntax error, unexpected `end', expecting ')'
+          end
+          ^~~
+:
+  app/views/stores/index.html.erb:15:in `'
+
+I, [2020-04-02T15:01:00.205356 #501]  INFO -- : Started POST "/__better_errors/bf98b8d0bc05aefa/variables" for 127.0.0.1 at 2020-04-02 15:01:00 +0000
+D, [2020-04-02T15:01:00.297778 #501] DEBUG -- :   [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:01:00.297971 #501] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:01:00.314218 #501] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:01:00.314426 #501] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:01:00.316833 #501] DEBUG -- :   [1m[36mStore Load (1.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:01:00.316982 #501] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:01:00.319215 #501] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:01:00.319395 #501] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:01:14.983494 #501]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:01:14 +0000
+I, [2020-04-02T15:01:14.985593 #501]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:01:14.989648 #501]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:01:14.992680 #501] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:01:14.993328 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:01:14.998724 #501] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:01:15.000449 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:01:15.003486 #501]  INFO -- :   Rendered stores/index.html.erb within layouts/application (13.5ms)
+I, [2020-04-02T15:01:15.023179 #501]  INFO -- :   Rendered partials/_footer.html.erb (1.7ms)
+I, [2020-04-02T15:01:15.114701 #501]  INFO -- : Completed 200 OK in 129ms (Views: 125.8ms | ActiveRecord: 0.4ms)
+
+
+I, [2020-04-02T15:01:31.910831 #501]  INFO -- : Started GET "/stores?page=2" for 127.0.0.1 at 2020-04-02 15:01:31 +0000
+I, [2020-04-02T15:01:31.913262 #501]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:01:31.913720 #501]  INFO -- :   Parameters: {"page"=>"2"}
+I, [2020-04-02T15:01:31.918932 #501]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:01:31.921306 #501] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 5]]
+D, [2020-04-02T15:01:31.922016 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-02T15:01:31.925694 #501]  INFO -- :   Rendered stores/index.html.erb within layouts/application (6.2ms)
+I, [2020-04-02T15:01:31.936324 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:01:32.076937 #501]  INFO -- : Completed 200 OK in 163ms (Views: 149.2ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T15:01:36.601821 #501]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-02 15:01:36 +0000
+I, [2020-04-02T15:01:36.604139 #501]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:01:36.604444 #501]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-02T15:01:36.608243 #501]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:01:36.611044 #501] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:01:36.611768 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:01:36.618750 #501] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:01:36.620657 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:01:36.623553 #501]  INFO -- :   Rendered stores/index.html.erb within layouts/application (14.8ms)
+I, [2020-04-02T15:01:36.642939 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:01:36.737847 #501]  INFO -- : Completed 200 OK in 133ms (Views: 130.2ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-02T15:05:59.036546 #501]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:05:59 +0000
+I, [2020-04-02T15:05:59.038764 #501]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:05:59.043494 #501]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:05:59.045996 #501] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:05:59.046483 #501] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:05:59.049692 #501] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:05:59.050289 #501] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:05:59.053948 #501]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.1ms)
+I, [2020-04-02T15:05:59.063834 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:05:59.136460 #501]  INFO -- : Completed 200 OK in 97ms (Views: 93.5ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T15:06:01.597899 #501]  INFO -- : Started GET "/employees/129/edit" for 127.0.0.1 at 2020-04-02 15:06:01 +0000
+I, [2020-04-02T15:06:01.601203 #501]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-02T15:06:01.602287 #501]  INFO -- :   Parameters: {"id"=>"129"}
+D, [2020-04-02T15:06:01.604533 #501] DEBUG -- :   [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:06:01.605418 #501] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+D, [2020-04-02T15:06:01.607345 #501] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:06:01.608291 #501] DEBUG -- :   ↳ app/controllers/employees_controller.rb:30
+I, [2020-04-02T15:06:01.612208 #501]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T15:06:01.644144 #501]  INFO -- :   Rendered employees/_form.html.erb (29.8ms)
+I, [2020-04-02T15:06:01.645163 #501]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (32.3ms)
+I, [2020-04-02T15:06:01.654975 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:06:01.725588 #501]  INFO -- : Completed 200 OK in 123ms (Views: 114.1ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T15:06:15.488604 #501]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:06:15 +0000
+I, [2020-04-02T15:06:15.490312 #501]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:06:15.494591 #501]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:06:15.497734 #501] DEBUG -- :   [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:06:15.498539 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:06:15.502615 #501] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:06:15.503416 #501] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:06:15.505595 #501]  INFO -- :   Rendered stores/index.html.erb within layouts/application (10.6ms)
+I, [2020-04-02T15:06:15.514785 #501]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:06:15.586503 #501]  INFO -- : Completed 200 OK in 96ms (Views: 92.5ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T15:08:42.750553 #1062]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:08:42 +0000
+D, [2020-04-02T15:08:42.762503 #1062] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T15:08:42.763275 #1062] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:08:42.772920 #1062]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:08:42.789715 #1062]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:08:42.792890 #1062] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:08:42.793854 #1062] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:08:42.805657 #1062] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:08:42.806677 #1062] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:08:42.924547 #1062]  INFO -- :   Rendered employees/index.html.erb within layouts/application (133.8ms)
+I, [2020-04-02T15:08:43.235042 #1062]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:08:43.419323 #1062]  INFO -- : Completed 200 OK in 645ms (Views: 629.1ms | ActiveRecord: 1.4ms)
+
+
+I, [2020-04-02T15:08:43.783639 #1062]  INFO -- : Started GET "/assets/application.self-57f5ba500bb7cb0f59140b7ae8e73836a8c227d3265b8838ddba31f4182d942f.js?body=1" for 127.0.0.1 at 2020-04-02 15:08:43 +0000
+I, [2020-04-02T15:08:45.483545 #1062]  INFO -- : Started GET "/employees/129/edit" for 127.0.0.1 at 2020-04-02 15:08:45 +0000
+I, [2020-04-02T15:08:45.486182 #1062]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-02T15:08:45.486498 #1062]  INFO -- :   Parameters: {"id"=>"129"}
+D, [2020-04-02T15:08:45.489622 #1062] DEBUG -- :   [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:08:45.490424 #1062] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+D, [2020-04-02T15:08:45.492468 #1062] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:08:45.493112 #1062] DEBUG -- :   ↳ app/controllers/employees_controller.rb:30
+I, [2020-04-02T15:08:45.495898 #1062]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T15:08:45.504771 #1062]  INFO -- :   Rendered employees/_form.html.erb (7.6ms)
+I, [2020-04-02T15:08:45.505233 #1062]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (9.1ms)
+I, [2020-04-02T15:08:45.513484 #1062]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:08:45.623141 #1062]  INFO -- : Completed 200 OK in 136ms (Views: 125.7ms | ActiveRecord: 0.4ms)
+
+
+I, [2020-04-02T15:09:38.446029 #1228]  INFO -- : Started GET "/employees/129/edit" for 127.0.0.1 at 2020-04-02 15:09:38 +0000
+D, [2020-04-02T15:09:38.458399 #1228] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T15:09:38.458603 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:09:38.467407 #1228]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-02T15:09:38.467605 #1228]  INFO -- :   Parameters: {"id"=>"129"}
+D, [2020-04-02T15:09:38.482573 #1228] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:09:38.482952 #1228] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+D, [2020-04-02T15:09:38.491726 #1228] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:09:38.492097 #1228] DEBUG -- :   ↳ app/controllers/employees_controller.rb:30
+I, [2020-04-02T15:09:38.495536 #1228]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T15:09:38.617261 #1228]  INFO -- :   Rendered employees/_form.html.erb (119.6ms)
+I, [2020-04-02T15:09:38.617827 #1228]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (122.0ms)
+I, [2020-04-02T15:09:38.797839 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:09:38.909822 #1228]  INFO -- : Completed 200 OK in 442ms (Views: 415.5ms | ActiveRecord: 0.9ms)
+
+
+I, [2020-04-02T15:10:05.976947 #1228]  INFO -- : Started GET "/employees/129/edit" for 127.0.0.1 at 2020-04-02 15:10:05 +0000
+I, [2020-04-02T15:10:05.979938 #1228]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-02T15:10:05.980653 #1228]  INFO -- :   Parameters: {"id"=>"129"}
+D, [2020-04-02T15:10:05.983028 #1228] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:10:05.983551 #1228] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+D, [2020-04-02T15:10:05.986205 #1228] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T15:10:05.987735 #1228] DEBUG -- :   ↳ app/controllers/employees_controller.rb:30
+I, [2020-04-02T15:10:05.993270 #1228]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T15:10:06.003483 #1228]  INFO -- :   Rendered employees/_form.html.erb (8.8ms)
+I, [2020-04-02T15:10:06.005150 #1228]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (11.5ms)
+I, [2020-04-02T15:10:06.028088 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:10:06.153301 #1228]  INFO -- : Completed 200 OK in 172ms (Views: 161.3ms | ActiveRecord: 0.2ms)
+
+
+I, [2020-04-02T15:10:32.271352 #1228]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:10:32 +0000
+I, [2020-04-02T15:10:32.273222 #1228]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:10:32.278460 #1228]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:10:32.281181 #1228] DEBUG -- :   [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:10:32.281784 #1228] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:10:32.284637 #1228] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:10:32.285299 #1228] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:10:32.290818 #1228]  INFO -- :   Rendered employees/index.html.erb within layouts/application (11.9ms)
+I, [2020-04-02T15:10:32.304045 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T15:10:32.374927 #1228]  INFO -- : Completed 200 OK in 101ms (Views: 97.0ms | ActiveRecord: 0.9ms)
+
+
+I, [2020-04-02T15:12:26.061131 #1228]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:12:26 +0000
+I, [2020-04-02T15:12:26.063379 #1228]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:12:26.069007 #1228]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:12:26.072440 #1228] DEBUG -- :   [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:12:26.072934 #1228] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:12:26.075410 #1228] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:12:26.075870 #1228] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:12:26.079220 #1228]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.9ms)
+I, [2020-04-02T15:12:26.088613 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:12:26.159044 #1228]  INFO -- : Completed 200 OK in 95ms (Views: 90.9ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-02T15:12:27.589579 #1228]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:12:27 +0000
+I, [2020-04-02T15:12:27.611010 #1228]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:12:27.619815 #1228]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:12:27.621671 #1228] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:12:27.622216 #1228] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:12:27.633051 #1228] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:12:27.633659 #1228] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:12:27.635495 #1228]  INFO -- :   Rendered stores/index.html.erb within layouts/application (15.1ms)
+I, [2020-04-02T15:12:27.645452 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:12:27.718678 #1228]  INFO -- : Completed 200 OK in 107ms (Views: 98.8ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-02T15:24:48.524230 #1228]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:24:48 +0000
+I, [2020-04-02T15:24:48.527768 #1228]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:24:48.531193 #1228]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T15:24:48.548525 #1228]  INFO -- :   Rendered stores/index.html.erb within layouts/application (17.0ms)
+I, [2020-04-02T15:24:48.549836 #1228]  INFO -- : Completed 500  in 22ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-02T15:24:48.562956 #1228] FATAL -- : 
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/stores/index.html.erb:12:in `_app_views_stores_index_html_erb___325070999818669653_24000'
+
+I, [2020-04-02T15:24:49.834634 #1228]  INFO -- : Started POST "/__better_errors/92eb3a3f589e94f5/variables" for 127.0.0.1 at 2020-04-02 15:24:49 +0000
+D, [2020-04-02T15:24:49.908573 #1228] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:24:49.908828 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.910220 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:24:49.910482 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.911813 #1228] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.912033 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.913524 #1228] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.913745 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.917868 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:24:49.918086 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.919126 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:24:49.919418 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.920455 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.920693 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.922000 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.922230 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.923116 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:24:49.923376 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.924409 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:24:49.924663 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.925807 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.926043 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:49.927392 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:49.927631 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.044830 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:24:50.045702 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.047473 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:24:50.048381 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.050268 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:50.050867 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.054093 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:50.054731 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.096379 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:24:50.096988 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.098347 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:24:50.098838 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.100092 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:50.100596 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:24:50.102035 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:24:50.102545 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:25:38.791691 #1228]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:25:38 +0000
+I, [2020-04-02T15:25:38.793932 #1228]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:25:38.799550 #1228]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T15:25:38.804002 #1228]  INFO -- :   Rendered stores/index.html.erb within layouts/application (4.1ms)
+I, [2020-04-02T15:25:38.805618 #1228]  INFO -- : Completed 500  in 11ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-02T15:25:38.816182 #1228] FATAL -- : 
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/stores/index.html.erb:12:in `_app_views_stores_index_html_erb___325070999818669653_24700'
+
+I, [2020-04-02T15:25:40.106459 #1228]  INFO -- : Started POST "/__better_errors/ec0c7c1fae2f8519/variables" for 127.0.0.1 at 2020-04-02 15:25:40 +0000
+D, [2020-04-02T15:25:40.162650 #1228] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:25:40.162940 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.164272 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:25:40.164509 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.165731 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.166002 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.167433 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.167658 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.171742 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:25:40.171968 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.173030 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:25:40.173317 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.174396 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.174613 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.175971 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.176213 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.177087 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:25:40.177366 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.178374 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:25:40.178599 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.179641 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.179851 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.181127 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.181355 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.392526 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:25:40.393164 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.395421 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:25:40.396404 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.398316 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.399749 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.402732 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.403387 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.446262 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:25:40.446701 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.448042 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:25:40.448465 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.449703 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.450059 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:25:40.451599 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:25:40.451953 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:27:25.827024 #1228]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:27:25 +0000
+I, [2020-04-02T15:27:25.828522 #1228]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:27:25.831765 #1228]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:27:25.833525 #1228] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:25.834175 #1228] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:27:25.838517 #1228] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:25.839576 #1228] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:27:25.842471 #1228]  INFO -- :   Rendered stores/index.html.erb within layouts/application (10.1ms)
+I, [2020-04-02T15:27:25.853562 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:27:25.925422 #1228]  INFO -- : Completed 200 OK in 97ms (Views: 93.8ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-02T15:27:44.011585 #1228]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:27:44 +0000
+I, [2020-04-02T15:27:44.033683 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:27:44.043527 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:27:44.045967 #1228] DEBUG -- :   [1m[36mAssignment Load (1.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.046471 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:27:44.060341 #1228] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:27:44.060750 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:27:44.063847 #1228] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:27:44.064377 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:27:44.067022 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.067421 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.069162 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.069576 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.072885 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.073761 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.076846 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.077263 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.084899 #1228] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.085593 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.087903 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.088760 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.090840 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.091889 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.094292 #1228] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.094964 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.213174 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.213595 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.215163 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.215664 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.217016 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.217492 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.219073 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.219569 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.246378 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.246725 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.248005 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.248431 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.249613 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.249982 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.251531 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.251933 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.273453 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.273809 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.275091 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.275575 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.276813 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.277254 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.278745 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.279194 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.311623 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.311998 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.314418 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.314906 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.322994 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.323503 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.324938 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.325429 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.326846 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.327385 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.329029 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.329530 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.350740 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.351223 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.352679 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.353159 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.354437 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.354857 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.356313 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.356764 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.374637 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.374958 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.376512 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.376947 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:27:44.395613 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (351.8ms)
+I, [2020-04-02T15:27:44.396748 #1228]  INFO -- : Completed 500  in 363ms (ActiveRecord: 3.8ms)
+
+
+D, [2020-04-02T15:27:44.405770 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.405986 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.407377 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.407577 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.409001 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.409207 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.410495 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.410703 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.414603 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.414838 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.415980 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.416234 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.417358 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.417620 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.418935 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.419174 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.438513 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.438754 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.439777 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.440026 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.441013 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.441256 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.442536 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.442791 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.470040 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.470313 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.471353 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.471590 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.472553 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.472821 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.474008 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.474247 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.493485 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.493718 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.494723 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.495048 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.496115 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.496385 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.497633 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.497876 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.530870 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.531096 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.533150 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.533610 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.542849 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.543656 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.545168 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.545422 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.546863 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.547100 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.549201 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.549827 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.659056 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:27:44.659360 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.660467 #1228] DEBUG -- :   [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:27:44.660710 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.661754 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.661995 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.663185 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? LIMIT ?[0m  [["active", 1], ["LIMIT", 11]]
+D, [2020-04-02T15:27:44.663474 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.681282 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.681504 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:44.682693 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:44.682895 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+F, [2020-04-02T15:27:44.695720 #1228] FATAL -- : 
+NoMethodError - undefined method `terminate_assignment_path' for #<#<Class:0x00007fdfac590dd8>:0x00007fdfac5ab2a0>
+Did you mean?  assignments_terminate_path:
+  app/views/assignments/index.html.erb:18:in `block in _app_views_assignments_index_html_erb___229116309047441028_25640'
+  app/views/assignments/index.html.erb:12:in `_app_views_assignments_index_html_erb___229116309047441028_25640'
+
+I, [2020-04-02T15:27:45.992686 #1228]  INFO -- : Started POST "/__better_errors/307ad4b647e96e8d/variables" for 127.0.0.1 at 2020-04-02 15:27:45 +0000
+D, [2020-04-02T15:27:46.003695 #1228] DEBUG -- :   [1m[36mAssignment Load (0.4ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.004486 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.006392 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.006821 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.008546 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.008955 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.010578 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.010985 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.012962 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.013385 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.015016 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.015444 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.035869 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.036194 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.037746 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.038069 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.039888 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.040213 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.041898 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.042393 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.044414 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.044744 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.046455 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.046777 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.167701 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.167994 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.169575 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.169854 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.173771 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.174044 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.175540 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.175811 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.177257 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.177521 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.178902 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.179154 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.181015 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.181322 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.182702 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.182995 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.184502 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.184794 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.186143 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.186443 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.204177 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.204481 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.205906 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.206195 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.207751 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.208048 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.209440 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.209723 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.229641 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.229931 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.231374 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.231650 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.233159 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.233464 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.234782 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.235060 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.256913 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.257219 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.258721 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.259006 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.260571 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.260881 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.262266 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.262575 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.288733 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.289051 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.290651 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.290948 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.293800 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.294182 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.295645 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.295930 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.297577 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.297870 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.299341 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.299699 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.301391 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.301717 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.303139 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.303499 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.321881 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.322193 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.323630 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.324003 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.325574 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.325875 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.327346 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.327650 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.329335 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.329636 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.331037 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.331368 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.350437 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.350692 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.352067 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.352330 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.355311 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.355554 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.356945 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.357187 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.358699 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.358988 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.360377 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.360667 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.455814 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.456097 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.458087 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.458609 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.508296 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.508933 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:27:46.510851 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:27:46.511388 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:28:34.518727 #1228]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:28:34 +0000
+I, [2020-04-02T15:28:34.521216 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:28:34.526488 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:28:34.528587 #1228] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:28:34.529129 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:28:34.531039 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:28:34.531681 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:28:34.533573 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:28:34.534117 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:28:34.537301 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.537824 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.540186 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.540764 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.542832 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.543272 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.545175 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.545742 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.548454 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.548994 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.550807 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.551422 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.553492 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.554041 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.555826 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.556388 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.560289 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.562174 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.565284 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.566056 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.570843 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.571670 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.573771 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.574186 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.579078 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.579527 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.581067 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.581492 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.605805 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.606229 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.607890 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.608315 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.610186 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.610628 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.612272 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.612710 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.616547 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.616985 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.618643 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.619047 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.621568 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.621983 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.623634 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.624050 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.629060 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.629480 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.632332 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.632915 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.661006 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.661577 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.663296 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.663729 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.665439 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.665871 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.667463 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.667881 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.671658 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.672074 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.673675 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.674090 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.676615 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.677043 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.678633 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.679054 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.684051 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.684479 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.686027 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.686443 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.714842 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.715674 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.718531 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.719466 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.722270 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.722997 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.725004 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.725715 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.732212 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.733096 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.735420 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.736499 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.740703 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.741580 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.744303 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.745374 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.754356 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.755495 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.758413 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.759564 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.796971 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.797692 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.799804 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.800433 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.804657 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.805319 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.807258 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.807928 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.810136 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.810673 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.812885 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.813416 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.818045 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.818595 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.820782 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.821373 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.824630 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.825297 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.827135 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.827843 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.833527 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.834187 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.836229 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.837165 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.934928 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.935502 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.937047 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.937518 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.939092 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.939623 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.941079 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.941558 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.944738 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.945194 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.946649 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.947091 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.949609 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.950093 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.951609 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.952067 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.956306 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.956759 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.958264 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.958729 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.976829 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.977273 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:34.978728 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:34.979161 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:28:34.996816 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (470.0ms)
+I, [2020-04-02T15:28:34.997929 #1228]  INFO -- : Completed 500  in 476ms (ActiveRecord: 2.3ms)
+
+
+D, [2020-04-02T15:28:35.009543 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.009852 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.011114 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.011456 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.012816 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.013116 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.014351 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.014654 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.016488 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.016836 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.018120 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.018478 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.019923 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.020376 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.021662 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.022006 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.024920 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.025265 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.026572 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.026916 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.029111 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.029547 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.030831 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.031173 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.035363 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.035710 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.037026 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.037376 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.054349 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.054704 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.056068 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.056490 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.057966 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.058309 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.059696 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.060040 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.062906 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.063261 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.064567 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.064912 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.067141 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.067519 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.068794 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.069132 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.166392 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.1ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.166804 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.168170 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.168538 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.187892 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.188125 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.189444 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.189789 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.191184 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.191549 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.192809 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.193152 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.196062 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.196424 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.197703 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.198049 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.200236 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.200601 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.201883 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.202232 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.206300 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.206650 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.207948 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.208283 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.224494 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.224855 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.226132 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.226484 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.227900 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.228245 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.229514 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.229850 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.232750 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.233100 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.234631 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.234970 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.237043 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.237403 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.238670 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.239009 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.242939 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.243294 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.244718 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.245080 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.267263 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.267653 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.269092 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.269426 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.273097 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.273463 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.274765 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.275114 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.276568 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.276921 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.278217 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.278622 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.281580 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.281926 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.283353 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.283702 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.285738 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.286078 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.287379 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.287727 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.294652 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.295029 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.296424 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.296784 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.314579 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.314966 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.316386 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.316748 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.318211 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.318588 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.319992 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.320383 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.323515 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.323860 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.325207 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.325590 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.327691 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.328033 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.329387 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.329755 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.333921 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.334255 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.335630 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.335961 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.354168 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.354521 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:35.355915 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:35.356230 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+F, [2020-04-02T15:28:35.384445 #1228] FATAL -- : 
+NoMethodError - undefined method `destroy_assignment_path' for #<#<Class:0x00007fdfac590dd8>:0x00007fdfcc3f8488>
+Did you mean?  edit_assignment_path:
+  app/views/assignments/index.html.erb:18:in `block in _app_views_assignments_index_html_erb___229116309047441028_28620'
+  app/views/assignments/index.html.erb:12:in `_app_views_assignments_index_html_erb___229116309047441028_28620'
+
+I, [2020-04-02T15:28:36.679635 #1228]  INFO -- : Started POST "/__better_errors/78c3346a92f510ac/variables" for 127.0.0.1 at 2020-04-02 15:28:36 +0000
+D, [2020-04-02T15:28:36.688423 #1228] DEBUG -- :   [1m[36mAssignment Load (0.3ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.688878 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.691114 #1228] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.691437 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.693177 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.693484 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.694922 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.695194 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.697020 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.697289 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.698749 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.699030 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.720070 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.720468 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.721888 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.722204 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.723776 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.724072 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.725465 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.725775 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.727551 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.728079 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.732061 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.732354 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.752896 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.754493 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.756594 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.757406 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.761553 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.762287 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.764141 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.764894 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.766862 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.767652 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.769483 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.770238 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.772719 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.773516 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.775434 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.776227 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.778252 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.779059 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.780993 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.781793 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.802051 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.802616 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.804226 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.804752 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.806469 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.806990 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.808601 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.809116 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.839206 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.839903 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.841911 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.842452 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.844589 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.845245 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.847063 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.847724 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.872053 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.872869 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.874861 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.875412 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.877512 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.878096 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.880104 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.880745 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.908613 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.909252 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.911098 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.911683 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.916904 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.917715 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.920630 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.921413 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.923414 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.923883 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.925589 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.926062 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.928112 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.928584 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.930225 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.930686 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.952947 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.953418 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.955016 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.955509 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.957270 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.957698 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.959482 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.959872 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.961835 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.962296 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.963970 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.964362 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.985062 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.985421 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.986811 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.987145 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.990304 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.990650 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.992045 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.992398 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.993943 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.994285 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:36.995785 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:36.996132 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:37.092837 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:37.093614 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:37.096211 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:37.096572 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:37.236196 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:37.236597 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-02T15:28:37.237932 #1228] DEBUG -- :   [1m[36mCACHE Assignment Load (0.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE (end_date IS NOT NULL) LIMIT ?[0m  [["LIMIT", 11]]
+D, [2020-04-02T15:28:37.238243 #1228] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:29:23.306892 #1228]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:29:23 +0000
+I, [2020-04-02T15:29:23.309381 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:29:23.314801 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:29:23.317955 #1228] DEBUG -- :   [1m[36mAssignment Load (1.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:29:23.318443 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:29:23.320212 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.320687 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:23.322389 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.322855 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:23.324576 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.325011 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:23.330408 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.330829 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:23.332492 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.332905 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:23.334420 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.334843 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:23.336632 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.337043 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:23.338566 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.338981 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:23.340667 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.341085 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:23.342510 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:23.342916 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:23.346131 #1228] DEBUG -- :   [1m[35m (1.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:29:23.346619 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:29:23.350144 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (35.0ms)
+I, [2020-04-02T15:29:23.359775 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:29:23.429327 #1228]  INFO -- : Completed 200 OK in 120ms (Views: 113.1ms | ActiveRecord: 3.5ms)
+
+
+I, [2020-04-02T15:29:29.005429 #1228]  INFO -- : Started GET "/assignments?page=9" for 127.0.0.1 at 2020-04-02 15:29:29 +0000
+I, [2020-04-02T15:29:29.007756 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:29:29.008065 #1228]  INFO -- :   Parameters: {"page"=>"9"}
+I, [2020-04-02T15:29:29.011296 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:29:29.013287 #1228] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 40]]
+D, [2020-04-02T15:29:29.013695 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:29:29.015211 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 171], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.015652 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:29.017151 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.017560 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:29.019074 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 181], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.019505 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:29.020897 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.021289 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:29.022744 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 182], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.023142 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:29.024546 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.024929 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:29.026391 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 203], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.026783 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:29.028218 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.028620 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:29.030081 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.030502 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:29.031900 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:29.032288 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:29.033752 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:29:29.034160 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:29:29.037847 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (26.3ms)
+I, [2020-04-02T15:29:29.048898 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.9ms)
+I, [2020-04-02T15:29:29.154293 #1228]  INFO -- : Completed 200 OK in 146ms (Views: 141.8ms | ActiveRecord: 1.6ms)
+
+
+I, [2020-04-02T15:29:32.526652 #1228]  INFO -- : Started GET "/assignments?page=2" for 127.0.0.1 at 2020-04-02 15:29:32 +0000
+I, [2020-04-02T15:29:32.530126 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:29:32.530711 #1228]  INFO -- :   Parameters: {"page"=>"2"}
+I, [2020-04-02T15:29:32.536563 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:29:32.538577 #1228] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 5]]
+D, [2020-04-02T15:29:32.539094 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:29:32.540876 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 68], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.541312 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:32.543273 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.543731 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:32.545444 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 77], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.545868 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:32.547518 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.547938 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:32.549613 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 82], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.550041 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:32.551512 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.552009 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:32.553702 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 96], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.554110 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:32.555745 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.556243 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:32.557848 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 108], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.558348 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:32.560067 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:32.560584 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:32.562332 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:29:32.562758 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:29:32.566240 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (29.4ms)
+I, [2020-04-02T15:29:32.575941 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:29:32.692470 #1228]  INFO -- : Completed 200 OK in 161ms (Views: 155.0ms | ActiveRecord: 1.6ms)
+
+
+I, [2020-04-02T15:29:35.222075 #1228]  INFO -- : Started GET "/assignments?page=100" for 127.0.0.1 at 2020-04-02 15:29:35 +0000
+I, [2020-04-02T15:29:35.223563 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:29:35.223766 #1228]  INFO -- :   Parameters: {"page"=>"100"}
+I, [2020-04-02T15:29:35.226772 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:29:35.229288 #1228] DEBUG -- :   [1m[36mAssignment Load (0.8ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 495]]
+D, [2020-04-02T15:29:35.229909 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:29:35.231787 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.232288 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:35.234006 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.234470 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:35.235940 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.236362 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:35.237710 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.238127 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:35.239608 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.240029 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:35.241385 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.241805 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:35.243294 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.243727 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:35.245058 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.245481 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:35.246900 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.247357 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:35.248704 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+D, [2020-04-02T15:29:35.249117 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:35.250591 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:29:35.251051 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:29:35.253973 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (26.9ms)
+I, [2020-04-02T15:29:35.262132 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T15:29:35.324643 #1228]  INFO -- : Completed 200 OK in 101ms (Views: 96.8ms | ActiveRecord: 1.8ms)
+
+
+I, [2020-04-02T15:29:38.147102 #1228]  INFO -- : Started GET "/assignments?page=1" for 127.0.0.1 at 2020-04-02 15:29:38 +0000
+I, [2020-04-02T15:29:38.149283 #1228]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:29:38.149623 #1228]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-02T15:29:38.154748 #1228]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:29:38.158100 #1228] DEBUG -- :   [1m[36mAssignment Load (0.9ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:29:38.158582 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:29:38.160156 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.160623 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:38.162176 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.162638 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:38.164259 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.164772 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:38.166194 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.166651 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:38.168179 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.168616 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:38.170012 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.170427 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:38.171975 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.172387 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:38.173840 #1228] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.174246 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:38.175795 #1228] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.176193 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:29:38.177557 #1228] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:29:38.177943 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:29:38.179475 #1228] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:29:38.179902 #1228] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:29:38.183014 #1228]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (27.9ms)
+I, [2020-04-02T15:29:38.192007 #1228]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:29:38.261685 #1228]  INFO -- : Completed 200 OK in 112ms (Views: 107.0ms | ActiveRecord: 2.0ms)
+
+
