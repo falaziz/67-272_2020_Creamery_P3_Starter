@@ -964,3 +964,569 @@ I, [2020-04-02T13:38:19.461345 #27291]  INFO -- :   Rendered stores/show.html.er
 I, [2020-04-02T13:38:19.772411 #27291]  INFO -- : Completed 200 OK in 350ms (Views: 313.5ms | ActiveRecord: 1.9ms)
 
 
+I, [2020-04-02T13:50:13.818922 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 13:50:13 +0000
+D, [2020-04-02T13:50:13.831898 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T13:50:13.832125 #28220] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T13:50:13.841263 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T13:50:13.857517 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T13:50:13.862594 #28220] DEBUG -- :   [1m[36mEmployee Load (2.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T13:50:13.863059 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T13:50:13.874893 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:50:13.875434 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T13:50:13.991655 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (133.7ms)
+I, [2020-04-02T13:50:14.277445 #28220]  INFO -- : Completed 200 OK in 436ms (Views: 417.7ms | ActiveRecord: 3.9ms)
+
+
+I, [2020-04-02T13:50:42.892866 #28220]  INFO -- : Started GET "/employees/129" for 127.0.0.1 at 2020-04-02 13:50:42 +0000
+I, [2020-04-02T13:50:42.895504 #28220]  INFO -- : Processing by EmployeesController#show as HTML
+I, [2020-04-02T13:50:42.895831 #28220]  INFO -- :   Parameters: {"id"=>"129"}
+D, [2020-04-02T13:50:42.898695 #28220] DEBUG -- :   [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 129], ["LIMIT", 1]]
+D, [2020-04-02T13:50:42.899549 #28220] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+I, [2020-04-02T13:50:42.936869 #28220]  INFO -- :   Rendering employees/show.html.erb within layouts/application
+I, [2020-04-02T13:50:42.939090 #28220]  INFO -- :   Rendered employees/show.html.erb within layouts/application (1.9ms)
+I, [2020-04-02T13:50:43.095953 #28220]  INFO -- : Completed 200 OK in 199ms (Views: 158.7ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T13:50:49.881846 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 13:50:49 +0000
+I, [2020-04-02T13:50:49.884809 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T13:50:49.888877 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T13:50:49.891456 #28220] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T13:50:49.892282 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T13:50:49.895346 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:50:49.896187 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T13:50:49.900594 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (11.0ms)
+I, [2020-04-02T13:50:49.988686 #28220]  INFO -- : Completed 200 OK in 103ms (Views: 99.0ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T13:55:55.238176 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 13:55:55 +0000
+I, [2020-04-02T13:55:55.240510 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T13:55:55.245749 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T13:55:55.247713 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T13:55:55.248203 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T13:55:55.250589 #28220] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:55:55.251137 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T13:55:55.254544 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.5ms)
+I, [2020-04-02T13:55:55.264249 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T13:55:55.382349 #28220]  INFO -- : Completed 200 OK in 141ms (Views: 135.5ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T13:58:25.622969 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 13:58:25 +0000
+I, [2020-04-02T13:58:25.627852 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T13:58:25.634362 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T13:58:25.637947 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T13:58:25.639592 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T13:58:25.645232 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:58:25.647096 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T13:58:25.656516 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (21.5ms)
+I, [2020-04-02T13:58:25.674124 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T13:58:25.749005 #28220]  INFO -- : Completed 200 OK in 120ms (Views: 115.0ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:00:40.569465 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:00:40 +0000
+I, [2020-04-02T14:00:40.571503 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:00:40.576086 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:00:40.577988 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:00:40.578388 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:00:40.580806 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:00:40.581234 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:00:40.584584 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.2ms)
+I, [2020-04-02T14:00:42.820484 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:00:42.882566 #28220]  INFO -- : Completed 200 OK in 2311ms (Views: 2307.2ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:00:43.233469 #28220]  INFO -- : Started GET "/assets/application.self-50ce057853e99ae17b656ab6f49f07f9115714a2d110116ba30b7985e10248fd.css?body=1" for 127.0.0.1 at 2020-04-02 14:00:43 +0000
+I, [2020-04-02T14:01:20.810981 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:01:20 +0000
+I, [2020-04-02T14:01:20.812945 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:01:20.818167 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:01:20.821124 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:01:20.821835 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:01:20.824634 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:01:20.825057 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:01:20.828353 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.9ms)
+I, [2020-04-02T14:01:20.837215 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:01:20.905237 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 87.9ms | ActiveRecord: 0.9ms)
+
+
+I, [2020-04-02T14:06:37.305354 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:06:37 +0000
+I, [2020-04-02T14:06:37.307828 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:06:37.313318 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:06:37.315162 #28220] DEBUG -- :   [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:06:37.315619 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:06:37.318124 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:06:37.318557 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:06:37.321910 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.3ms)
+I, [2020-04-02T14:06:37.330923 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:06:37.401394 #28220]  INFO -- : Completed 200 OK in 93ms (Views: 89.1ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:08:02.116620 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:08:02 +0000
+I, [2020-04-02T14:08:02.118842 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:08:02.124492 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:08:02.126800 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:08:02.127730 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:08:02.132160 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:08:02.132616 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:08:02.138732 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (13.9ms)
+I, [2020-04-02T14:08:02.152477 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T14:08:02.252302 #28220]  INFO -- : Completed 200 OK in 133ms (Views: 128.1ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-02T14:14:12.780410 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:14:12 +0000
+I, [2020-04-02T14:14:12.783495 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:14:12.787581 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:14:12.790555 #28220] DEBUG -- :   [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:14:12.790983 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:14:12.794428 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:14:12.795409 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:14:12.800304 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (12.4ms)
+I, [2020-04-02T14:14:12.811630 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:14:12.896528 #28220]  INFO -- : Completed 200 OK in 113ms (Views: 109.2ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:14:28.590092 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:14:28 +0000
+I, [2020-04-02T14:14:28.592718 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:14:28.597143 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:14:28.599453 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:14:28.600108 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:14:28.603373 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:14:28.604119 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:14:28.608175 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.6ms)
+I, [2020-04-02T14:14:28.620448 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:14:28.726546 #28220]  INFO -- : Completed 200 OK in 132ms (Views: 128.1ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:15:18.745181 #28220]  INFO -- : Started GET "/employees/new" for 127.0.0.1 at 2020-04-02 14:15:18 +0000
+I, [2020-04-02T14:15:18.747515 #28220]  INFO -- : Processing by EmployeesController#new as HTML
+I, [2020-04-02T14:15:18.752307 #28220]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-02T14:15:18.753343 #28220]  INFO -- :   Rendered employees/new.html.erb within layouts/application (0.5ms)
+I, [2020-04-02T14:15:18.763397 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:15:18.831828 #28220]  INFO -- : Completed 200 OK in 84ms (Views: 81.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:17:04.518619 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:17:04 +0000
+I, [2020-04-02T14:17:04.520595 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:17:04.525784 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:17:04.528516 #28220] DEBUG -- :   [1m[36mEmployee Load (0.7ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:17:04.529051 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:17:04.531766 #28220] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:17:04.532282 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:17:04.535906 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.7ms)
+I, [2020-04-02T14:17:04.547852 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T14:17:04.627005 #28220]  INFO -- : Completed 200 OK in 106ms (Views: 101.9ms | ActiveRecord: 1.0ms)
+
+
+I, [2020-04-02T14:17:18.757345 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:17:18 +0000
+I, [2020-04-02T14:17:18.759312 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:17:18.763670 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:17:18.765625 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:17:18.766107 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:17:18.768795 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:17:18.769305 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:17:18.772891 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.9ms)
+I, [2020-04-02T14:17:18.781990 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:17:18.850098 #28220]  INFO -- : Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:18:04.753799 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:18:04 +0000
+I, [2020-04-02T14:18:04.755444 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:18:04.759338 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:18:04.761818 #28220] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:18:04.762197 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:18:04.764481 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:18:04.764861 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:18:04.768048 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.4ms)
+I, [2020-04-02T14:18:04.776878 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:18:04.840265 #28220]  INFO -- : Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:20:45.583136 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:20:45 +0000
+I, [2020-04-02T14:20:45.585382 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:20:45.591057 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:20:45.594132 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:20:45.594738 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:20:45.597455 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:20:45.598234 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:20:45.601756 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.3ms)
+I, [2020-04-02T14:20:45.610888 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:20:45.681714 #28220]  INFO -- : Completed 200 OK in 96ms (Views: 91.5ms | ActiveRecord: 1.0ms)
+
+
+I, [2020-04-02T14:21:16.372628 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:21:16 +0000
+I, [2020-04-02T14:21:16.374066 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:21:16.377633 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:21:16.379573 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:21:16.380128 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:21:16.382511 #28220] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:21:16.382968 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:21:16.386389 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.4ms)
+I, [2020-04-02T14:21:16.395706 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:21:16.466369 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 88.8ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:21:36.822957 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:21:36 +0000
+I, [2020-04-02T14:21:36.825255 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:21:36.831043 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:21:36.833763 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:21:36.834285 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:21:36.836924 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:21:36.837438 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:21:36.840843 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.4ms)
+I, [2020-04-02T14:21:36.850121 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:21:36.921735 #28220]  INFO -- : Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:21:56.170311 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:21:56 +0000
+I, [2020-04-02T14:21:56.172532 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:21:56.178185 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:21:56.181457 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:21:56.182249 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:21:56.185160 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:21:56.185635 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:21:56.189353 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.8ms)
+I, [2020-04-02T14:21:56.199400 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:21:56.281650 #28220]  INFO -- : Completed 200 OK in 109ms (Views: 104.3ms | ActiveRecord: 1.0ms)
+
+
+I, [2020-04-02T14:22:09.116471 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:22:09 +0000
+I, [2020-04-02T14:22:09.117902 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:22:09.121298 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:22:09.123400 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:22:09.123874 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:22:09.126336 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:22:09.126769 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:22:09.130122 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.5ms)
+I, [2020-04-02T14:22:09.138957 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:22:09.207964 #28220]  INFO -- : Completed 200 OK in 90ms (Views: 86.7ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:22:23.273204 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:22:23 +0000
+I, [2020-04-02T14:22:23.275500 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:22:23.281278 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:22:23.284459 #28220] DEBUG -- :   [1m[36mEmployee Load (0.9ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:22:23.285153 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:22:23.287658 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:22:23.288124 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:22:23.291402 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.8ms)
+I, [2020-04-02T14:22:23.300351 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:22:23.369804 #28220]  INFO -- : Completed 200 OK in 94ms (Views: 89.5ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-02T14:22:31.446762 #28220]  INFO -- : Started GET "/employees/new" for 127.0.0.1 at 2020-04-02 14:22:31 +0000
+I, [2020-04-02T14:22:31.448338 #28220]  INFO -- : Processing by EmployeesController#new as HTML
+I, [2020-04-02T14:22:31.451726 #28220]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-02T14:22:31.452435 #28220]  INFO -- :   Rendered employees/new.html.erb within layouts/application (0.4ms)
+I, [2020-04-02T14:22:31.461928 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:22:31.534770 #28220]  INFO -- : Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:23:15.955622 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:23:15 +0000
+I, [2020-04-02T14:23:15.957829 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:23:15.961797 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:23:15.963770 #28220] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:23:15.964255 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:23:15.966707 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:23:15.967190 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:23:15.970661 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.6ms)
+I, [2020-04-02T14:23:15.980278 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:23:16.054364 #28220]  INFO -- : Completed 200 OK in 96ms (Views: 92.3ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:23:25.559716 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:23:25 +0000
+I, [2020-04-02T14:23:25.561818 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:23:25.566513 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:23:25.568491 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:23:25.568964 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:23:25.571523 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:23:25.571995 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:23:25.575437 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.6ms)
+I, [2020-04-02T14:23:25.584528 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:23:25.654234 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 88.0ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:25:06.066473 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:25:06 +0000
+I, [2020-04-02T14:25:06.068487 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:25:06.073560 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:25:06.076590 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:25:06.077326 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:25:06.081359 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:25:06.082114 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:25:06.087840 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (13.8ms)
+I, [2020-04-02T14:25:06.103940 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-02T14:25:06.179278 #28220]  INFO -- : Completed 200 OK in 110ms (Views: 106.3ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-02T14:25:08.435634 #28220]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 14:25:08 +0000
+I, [2020-04-02T14:25:08.438115 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:25:08.442062 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:25:08.444412 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:25:08.446883 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:25:08.450025 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:25:08.450707 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:25:08.454453 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (11.9ms)
+I, [2020-04-02T14:25:08.464871 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:25:08.546736 #28220]  INFO -- : Completed 200 OK in 108ms (Views: 104.4ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:25:10.690323 #28220]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 14:25:10 +0000
+I, [2020-04-02T14:25:10.692450 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:25:10.697116 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:25:10.699392 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:25:10.699976 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:25:10.702820 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:25:10.703505 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:25:10.707400 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.7ms)
+I, [2020-04-02T14:25:10.717116 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:25:10.795057 #28220]  INFO -- : Completed 200 OK in 102ms (Views: 98.0ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:25:12.846875 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:25:12 +0000
+I, [2020-04-02T14:25:12.849053 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:25:12.853230 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:25:12.855319 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:25:12.855813 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:25:12.858521 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:25:12.859024 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:25:12.862773 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.2ms)
+I, [2020-04-02T14:25:12.871904 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T14:25:12.943189 #28220]  INFO -- : Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:27:59.432825 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:27:59 +0000
+I, [2020-04-02T14:27:59.434122 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:27:59.437305 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:27:59.439290 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:27:59.439764 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:27:59.442201 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:27:59.442697 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:27:59.446142 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.5ms)
+I, [2020-04-02T14:27:59.455198 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:27:59.526212 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 88.6ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:28:30.278699 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:28:30 +0000
+I, [2020-04-02T14:28:30.280070 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:28:30.283500 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:28:30.285531 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:28:30.286057 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:28:30.288606 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:28:30.289061 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:28:30.293015 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.2ms)
+I, [2020-04-02T14:28:30.302341 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:28:30.372532 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 89.1ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:30:15.569564 #28220]  INFO -- : Started GET "/employees/184" for 127.0.0.1 at 2020-04-02 14:30:15 +0000
+I, [2020-04-02T14:30:15.571753 #28220]  INFO -- : Processing by EmployeesController#show as HTML
+I, [2020-04-02T14:30:15.572109 #28220]  INFO -- :   Parameters: {"id"=>"184"}
+D, [2020-04-02T14:30:15.573942 #28220] DEBUG -- :   [1m[36mEmployee Load (0.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 184], ["LIMIT", 1]]
+D, [2020-04-02T14:30:15.574493 #28220] DEBUG -- :   ↳ app/controllers/employees_controller.rb:43
+I, [2020-04-02T14:30:15.579257 #28220]  INFO -- :   Rendering employees/show.html.erb within layouts/application
+I, [2020-04-02T14:30:15.580979 #28220]  INFO -- :   Rendered employees/show.html.erb within layouts/application (1.2ms)
+I, [2020-04-02T14:30:15.590454 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:30:15.659727 #28220]  INFO -- : Completed 200 OK in 87ms (Views: 81.8ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T14:32:31.833513 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:32:31 +0000
+I, [2020-04-02T14:32:31.835603 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:32:31.841299 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:32:31.844476 #28220] DEBUG -- :   [1m[36mEmployee Load (0.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:32:31.845294 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:32:31.847855 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:32:31.848321 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:32:31.851741 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.1ms)
+I, [2020-04-02T14:32:31.861481 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:32:31.931795 #28220]  INFO -- : Completed 200 OK in 96ms (Views: 91.5ms | ActiveRecord: 1.0ms)
+
+
+I, [2020-04-02T14:32:42.148168 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:32:42 +0000
+I, [2020-04-02T14:32:42.150928 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:32:42.159725 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:32:42.164927 #28220] DEBUG -- :   [1m[36mEmployee Load (1.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:32:42.166311 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:32:42.173247 #28220] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:32:42.174790 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:32:42.184366 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (23.7ms)
+I, [2020-04-02T14:32:42.198872 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T14:32:42.272203 #28220]  INFO -- : Completed 200 OK in 121ms (Views: 114.6ms | ActiveRecord: 1.9ms)
+
+
+I, [2020-04-02T14:33:29.796744 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:33:29 +0000
+I, [2020-04-02T14:33:29.798952 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:33:29.804484 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:33:29.807110 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:33:29.807620 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:33:29.810281 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:33:29.810812 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:33:29.814249 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.4ms)
+I, [2020-04-02T14:33:29.823441 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:33:29.896976 #28220]  INFO -- : Completed 200 OK in 98ms (Views: 93.6ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:33:51.816853 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:33:51 +0000
+I, [2020-04-02T14:33:51.820068 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:33:51.828939 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:33:51.834080 #28220] DEBUG -- :   [1m[36mEmployee Load (1.3ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:33:51.835552 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:33:51.842323 #28220] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:33:51.843837 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:33:51.853864 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (24.0ms)
+I, [2020-04-02T14:33:51.886997 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T14:33:51.965435 #28220]  INFO -- : Completed 200 OK in 145ms (Views: 138.6ms | ActiveRecord: 1.7ms)
+
+
+I, [2020-04-02T14:34:08.556046 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:34:08 +0000
+I, [2020-04-02T14:34:08.557369 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:34:08.560600 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:34:08.562471 #28220] DEBUG -- :   [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:34:08.562950 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:34:08.565534 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:34:08.566019 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:34:08.569435 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.5ms)
+I, [2020-04-02T14:34:08.578709 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:34:08.650029 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 89.4ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:41:29.167421 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:41:29 +0000
+I, [2020-04-02T14:41:29.170932 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:41:29.174877 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:41:29.177202 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:41:29.177757 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:41:29.180769 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:41:29.181305 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:41:29.184847 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.6ms)
+I, [2020-04-02T14:41:29.194005 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:41:29.263410 #28220]  INFO -- : Completed 200 OK in 92ms (Views: 88.7ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:42:27.662722 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:42:27 +0000
+I, [2020-04-02T14:42:27.665379 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:42:27.670864 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:42:27.672876 #28220] DEBUG -- :   [1m[36mEmployee Load (0.4ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:42:27.673321 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:42:27.675807 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:42:27.676249 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:42:27.679686 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (8.4ms)
+I, [2020-04-02T14:42:27.688758 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:42:27.759188 #28220]  INFO -- : Completed 200 OK in 93ms (Views: 89.6ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:42:36.333487 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:42:36 +0000
+I, [2020-04-02T14:42:36.335613 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:42:36.339960 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:42:36.342365 #28220] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:42:36.343128 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:42:36.346048 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:42:36.346712 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:42:36.350356 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.0ms)
+I, [2020-04-02T14:42:36.359569 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:36.429830 #28220]  INFO -- : Completed 200 OK in 94ms (Views: 89.9ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T14:42:40.689890 #28220]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 14:42:40 +0000
+I, [2020-04-02T14:42:40.726104 #28220]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T14:42:40.735634 #28220]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T14:42:40.736239 #28220]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T14:42:40.745309 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:40.815937 #28220]  INFO -- : Completed 200 OK in 89ms (Views: 81.2ms | ActiveRecord: 0.4ms)
+
+
+I, [2020-04-02T14:42:42.970008 #28220]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 14:42:42 +0000
+I, [2020-04-02T14:42:42.974868 #28220]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T14:42:42.979886 #28220]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+I, [2020-04-02T14:42:42.980643 #28220]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T14:42:42.990638 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:43.065174 #28220]  INFO -- : Completed 200 OK in 90ms (Views: 86.2ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:42:44.703912 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:42:44 +0000
+I, [2020-04-02T14:42:44.706506 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:42:44.710445 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:42:44.712583 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:42:44.713226 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:42:44.716047 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:42:44.716686 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:42:44.720384 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.6ms)
+I, [2020-04-02T14:42:44.729937 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:44.806985 #28220]  INFO -- : Completed 200 OK in 100ms (Views: 96.5ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:42:46.917118 #28220]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 14:42:46 +0000
+I, [2020-04-02T14:42:46.918864 #28220]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T14:42:46.922401 #28220]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+I, [2020-04-02T14:42:46.923201 #28220]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (0.4ms)
+I, [2020-04-02T14:42:46.932600 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:47.003729 #28220]  INFO -- : Completed 200 OK in 85ms (Views: 81.9ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:42:48.858480 #28220]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 14:42:48 +0000
+I, [2020-04-02T14:42:48.860617 #28220]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T14:42:48.864293 #28220]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T14:42:48.865108 #28220]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T14:42:48.875183 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:48.961649 #28220]  INFO -- : Completed 200 OK in 101ms (Views: 98.0ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:42:50.278026 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:42:50 +0000
+I, [2020-04-02T14:42:50.280416 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:42:50.286965 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:42:50.289304 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:42:50.289847 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:42:50.292488 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:42:50.293025 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:42:50.296670 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.4ms)
+I, [2020-04-02T14:42:50.306440 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-02T14:42:50.378614 #28220]  INFO -- : Completed 200 OK in 98ms (Views: 93.2ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:42:52.620804 #28220]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 14:42:52 +0000
+I, [2020-04-02T14:42:52.622453 #28220]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T14:42:52.627580 #28220]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T14:42:52.628617 #28220]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-02T14:42:52.639289 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:52.709808 #28220]  INFO -- : Completed 200 OK in 87ms (Views: 83.8ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:42:54.509202 #28220]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 14:42:54 +0000
+I, [2020-04-02T14:42:54.511208 #28220]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T14:42:54.515835 #28220]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+I, [2020-04-02T14:42:54.516550 #28220]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T14:42:54.525777 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:54.594629 #28220]  INFO -- : Completed 200 OK in 83ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T14:42:55.617465 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:42:55 +0000
+I, [2020-04-02T14:42:55.618834 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:42:55.622649 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:42:55.624793 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:42:55.625254 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:42:55.628001 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:42:55.628515 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:42:55.632169 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.2ms)
+I, [2020-04-02T14:42:55.641949 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:42:55.715741 #28220]  INFO -- : Completed 200 OK in 97ms (Views: 93.0ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T14:43:32.316882 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:43:32 +0000
+I, [2020-04-02T14:43:32.319126 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:43:32.323956 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:43:32.326010 #28220] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:43:32.326477 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:43:32.329268 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:43:32.329790 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:43:32.333550 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.3ms)
+I, [2020-04-02T14:43:32.343565 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:43:32.421999 #28220]  INFO -- : Completed 200 OK in 102ms (Views: 98.1ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T14:44:09.384274 #28220]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 14:44:09 +0000
+I, [2020-04-02T14:44:09.386715 #28220]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T14:44:09.393156 #28220]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T14:44:09.396211 #28220] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T14:44:09.396767 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T14:44:09.399645 #28220] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T14:44:09.400185 #28220] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T14:44:09.404062 #28220]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.5ms)
+I, [2020-04-02T14:44:09.414602 #28220]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T14:44:09.494846 #28220]  INFO -- : Completed 200 OK in 108ms (Views: 103.0ms | ActiveRecord: 0.8ms)
+
+
