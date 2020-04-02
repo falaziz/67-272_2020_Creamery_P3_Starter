@@ -460,3 +460,533 @@ I, [2020-04-02T00:08:00.106106 #5261]  INFO -- :   Rendering stores/index.html.e
 I, [2020-04-02T00:08:00.106815 #5261]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.3ms)
 I, [2020-04-02T00:08:00.107972 #5261]  INFO -- : Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.0ms)
 D, [2020-04-02T00:08:00.110298 #5261] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:41.910781 #19180] DEBUG -- :   [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T11:49:42.063226 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.064959 #19180]  INFO -- : --------------------------------------------------------------------------
+I, [2020-04-02T11:49:42.065005 #19180]  INFO -- : AssignmentsControllerTest: test_should_destroy_assignment_when_appropriate
+I, [2020-04-02T11:49:42.065030 #19180]  INFO -- : --------------------------------------------------------------------------
+D, [2020-04-02T11:49:42.205897 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.208114 #19180] DEBUG -- :   [1m[36mStore Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.210431 #19180] DEBUG -- :   [1m[36mStore Create (1.1ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "8412771562"], ["active", 1]]
+D, [2020-04-02T11:49:42.211645 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.225179 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.227771 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "150819747"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.229093 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "150819747"], ["date_of_birth", "2001-04-02"], ["phone", "4640979115"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.230183 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.247020 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.248605 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.250531 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.251931 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.260036 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.261143 #19180] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.261977 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.262762 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+I, [2020-04-02T11:49:42.266353 #19180]  INFO -- : Started DELETE "/assignments/1" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+I, [2020-04-02T11:49:42.277768 #19180]  INFO -- : Processing by AssignmentsController#destroy as HTML
+I, [2020-04-02T11:49:42.278064 #19180]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T11:49:42.283166 #19180] DEBUG -- :   [1m[36mAssignment Load (0.2ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" WHERE "assignments"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.284385 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.285498 #19180] DEBUG -- :   [1m[36mAssignment Destroy (0.2ms)[0m  [1m[31mDELETE FROM "assignments" WHERE "assignments"."id" = ?[0m  [["id", 1]]
+D, [2020-04-02T11:49:42.286428 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.287419 #19180]  INFO -- : Redirected to http://www.example.com/assignments
+I, [2020-04-02T11:49:42.288333 #19180]  INFO -- : Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+D, [2020-04-02T11:49:42.297290 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T11:49:42.301399 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.302228 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.302560 #19180]  INFO -- : ----------------------------------------------
+I, [2020-04-02T11:49:42.302631 #19180]  INFO -- : AssignmentsControllerTest: test_should_get_new
+I, [2020-04-02T11:49:42.302692 #19180]  INFO -- : ----------------------------------------------
+D, [2020-04-02T11:49:42.303724 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.305431 #19180] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.307184 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "1149711696"], ["active", 1]]
+D, [2020-04-02T11:49:42.308596 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.309937 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.311495 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "263531376"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.312976 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "263531376"], ["date_of_birth", "2001-04-02"], ["phone", "1250310528"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.314356 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.315695 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.317061 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.318270 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.319527 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.321183 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.322436 #19180] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.323729 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.325021 #19180]  INFO -- : Started GET "/assignments/new" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+I, [2020-04-02T11:49:42.326260 #19180]  INFO -- : Processing by AssignmentsController#new as HTML
+I, [2020-04-02T11:49:42.331408 #19180]  INFO -- :   Rendering assignments/new.html.erb within layouts/application
+I, [2020-04-02T11:49:42.332980 #19180]  INFO -- :   Rendered assignments/new.html.erb within layouts/application (1.1ms)
+I, [2020-04-02T11:49:42.334428 #19180]  INFO -- : Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+D, [2020-04-02T11:49:42.337158 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.337936 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.338276 #19180]  INFO -- : -----------------------------------------------------------------------------------------
+I, [2020-04-02T11:49:42.338353 #19180]  INFO -- : AssignmentsControllerTest: test_should_not_have_the_ability_to_edit_or_update_assignments
+I, [2020-04-02T11:49:42.338462 #19180]  INFO -- : -----------------------------------------------------------------------------------------
+D, [2020-04-02T11:49:42.339339 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.340794 #19180] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.342393 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "5713267001"], ["active", 1]]
+D, [2020-04-02T11:49:42.343748 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.345042 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.346565 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "038487436"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.348081 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "038487436"], ["date_of_birth", "2001-04-02"], ["phone", "5690824532"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.349408 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.350758 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.352154 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.353361 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.354528 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.356215 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.357461 #19180] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.358510 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.359838 #19180]  INFO -- : Started GET "/assignments/1/edit" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+F, [2020-04-02T11:49:42.378677 #19180] FATAL -- : 
+AbstractController::ActionNotFound - The action 'edit' could not be found for AssignmentsController:
+  test/controllers/assignments_controller_test.rb:55:in `block in <class:AssignmentsControllerTest>'
+
+I, [2020-04-02T11:49:42.382815 #19180]  INFO -- : Started PATCH "/assignments/1" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+F, [2020-04-02T11:49:42.398925 #19180] FATAL -- : 
+AbstractController::ActionNotFound - The action 'update' could not be found for AssignmentsController:
+  test/controllers/assignments_controller_test.rb:57:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-02T11:49:42.402516 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.403332 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.403633 #19180]  INFO -- : -------------------------------------------------------------------------
+I, [2020-04-02T11:49:42.403731 #19180]  INFO -- : AssignmentsControllerTest: test_should_create_assignment_when_appropriate
+I, [2020-04-02T11:49:42.403796 #19180]  INFO -- : -------------------------------------------------------------------------
+D, [2020-04-02T11:49:42.404714 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.406255 #19180] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.407839 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "9264905612"], ["active", 1]]
+D, [2020-04-02T11:49:42.409193 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.410537 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.412045 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "191631943"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.413483 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "191631943"], ["date_of_birth", "2001-04-02"], ["phone", "3647706297"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.414901 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.416270 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.417558 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.418774 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.419999 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.421582 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.422873 #19180] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.423953 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.424913 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T11:49:42.426215 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.427698 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "288609124"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.429093 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Fred"], ["last_name", "Gruberman"], ["ssn", "288609124"], ["date_of_birth", "2001-04-02"], ["phone", "1874498314"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.430451 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.432046 #19180]  INFO -- : Started POST "/assignments" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+I, [2020-04-02T11:49:42.433308 #19180]  INFO -- : Processing by AssignmentsController#create as HTML
+I, [2020-04-02T11:49:42.433684 #19180]  INFO -- :   Parameters: {"assignment"=>{"store_id"=>"1", "employee_id"=>"2", "start_date"=>"2020-04-01", "end_date"=>nil}}
+D, [2020-04-02T11:49:42.434575 #19180] DEBUG -- : Unpermitted parameter: :end_date
+D, [2020-04-02T11:49:42.435927 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.437982 #19180] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.440175 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.450799 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.452252 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.453470 #19180] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.455222 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 2], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.456632 #19180] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 2], ["start_date", "2020-04-01"]]
+D, [2020-04-02T11:49:42.457782 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.459731 #19180]  INFO -- : Completed 500  in 26ms (ActiveRecord: 0.8ms)
+F, [2020-04-02T11:49:42.474868 #19180] FATAL -- : 
+ActionController::UrlGenerationError - No route matches {:action=>"show", :controller=>"assignments"}, missing required keys: [:id]:
+  app/controllers/assignments_controller.rb:25:in `create'
+  test/controllers/assignments_controller_test.rb:26:in `block (2 levels) in <class:AssignmentsControllerTest>'
+  test/controllers/assignments_controller_test.rb:24:in `block in <class:AssignmentsControllerTest>'
+
+D, [2020-04-02T11:49:42.479100 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T11:49:42.487634 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.488655 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.488995 #19180]  INFO -- : ------------------------------------------------
+I, [2020-04-02T11:49:42.489072 #19180]  INFO -- : AssignmentsControllerTest: test_should_get_index
+I, [2020-04-02T11:49:42.489132 #19180]  INFO -- : ------------------------------------------------
+D, [2020-04-02T11:49:42.490025 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.491554 #19180] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.493179 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7523044259"], ["active", 1]]
+D, [2020-04-02T11:49:42.494603 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.495908 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.497375 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "209022797"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.498930 #19180] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "209022797"], ["date_of_birth", "2001-04-02"], ["phone", "2757127700"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.500256 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.501543 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.502835 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.504054 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.505198 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.506730 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.508056 #19180] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.509070 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.510291 #19180]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+I, [2020-04-02T11:49:42.511318 #19180]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T11:49:42.513486 #19180]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+I, [2020-04-02T11:49:42.514418 #19180]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-02T11:49:42.515493 #19180]  INFO -- : Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+D, [2020-04-02T11:49:42.517982 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.518687 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.519068 #19180]  INFO -- : -------------------------------------------------------------------------------
+I, [2020-04-02T11:49:42.519143 #19180]  INFO -- : AssignmentsControllerTest: test_should_not_create_assignment_when_inappropriate
+I, [2020-04-02T11:49:42.519202 #19180]  INFO -- : -------------------------------------------------------------------------------
+D, [2020-04-02T11:49:42.520023 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.521363 #19180] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.522823 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3173294763"], ["active", 1]]
+D, [2020-04-02T11:49:42.524192 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.525382 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.526833 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "263909238"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.528287 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "263909238"], ["date_of_birth", "2001-04-02"], ["phone", "9818837052"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.529613 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.530918 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.532198 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.533385 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.534519 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.536149 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.537381 #19180] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.538428 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.539815 #19180]  INFO -- : Started POST "/assignments" for 127.0.0.1 at 2020-04-02 11:49:42 +0000
+I, [2020-04-02T11:49:42.540771 #19180]  INFO -- : Processing by AssignmentsController#create as HTML
+I, [2020-04-02T11:49:42.541056 #19180]  INFO -- :   Parameters: {"assignment"=>{"store_id"=>"1", "employee_id"=>nil, "start_date"=>"2020-04-01", "end_date"=>nil}}
+D, [2020-04-02T11:49:42.541786 #19180] DEBUG -- : Unpermitted parameter: :end_date
+D, [2020-04-02T11:49:42.542440 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.543690 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.742187 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.743600 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.745043 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-02T11:49:42.746110 #19180]  INFO -- :   Rendering assignments/new.html.erb within layouts/application
+I, [2020-04-02T11:49:42.746489 #19180]  INFO -- :   Rendered assignments/new.html.erb within layouts/application (0.1ms)
+I, [2020-04-02T11:49:42.747737 #19180]  INFO -- : Completed 200 OK in 206ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+D, [2020-04-02T11:49:42.751763 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T11:49:42.752521 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T11:49:42.752884 #19180]  INFO -- : -----------------------------------------------------------
+I, [2020-04-02T11:49:42.752963 #19180]  INFO -- : AssignmentsControllerTest: test_should_terminate_assignment
+I, [2020-04-02T11:49:42.753034 #19180]  INFO -- : -----------------------------------------------------------
+D, [2020-04-02T11:49:42.753835 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.755207 #19180] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.756720 #19180] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3792839292"], ["active", 1]]
+D, [2020-04-02T11:49:42.758062 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.759336 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.760732 #19180] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "370708594"], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.762138 #19180] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "370708594"], ["date_of_birth", "2001-04-02"], ["phone", "3468332234"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T11:49:42.763486 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.764750 #19180] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.766011 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.767165 #19180] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T11:49:42.768332 #19180] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.769964 #19180] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T11:49:42.771176 #19180] DEBUG -- :   [1m[36mAssignment Create (0.1ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T11:49:42.772244 #19180] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T11:49:42.773185 #19180] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:06.419005 #27131] DEBUG -- :   [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T13:37:06.509640 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:06.510050 #27131]  INFO -- : ------------------------------------------------------------------------
+I, [2020-04-02T13:37:06.510090 #27131]  INFO -- : StoresControllerTest: test_should_not_have_the_ability_to_destroy_stores
+I, [2020-04-02T13:37:06.510114 #27131]  INFO -- : ------------------------------------------------------------------------
+D, [2020-04-02T13:37:06.646033 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:06.649235 #27131] DEBUG -- :   [1m[36mStore Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:06.650952 #27131] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7559883907"], ["active", 1]]
+D, [2020-04-02T13:37:06.652211 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:06.655323 #27131]  INFO -- : Started DELETE "/stores/1" for 127.0.0.1 at 2020-04-02 13:37:06 +0000
+F, [2020-04-02T13:37:06.688442 #27131] FATAL -- : 
+AbstractController::ActionNotFound - The action 'destroy' could not be found for StoresController:
+  test/controllers/stores_controller_test.rb:60:in `block in <class:StoresControllerTest>'
+
+D, [2020-04-02T13:37:06.694776 #27131] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:06.695745 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:06.696094 #27131]  INFO -- : ------------------------------------------
+I, [2020-04-02T13:37:06.696188 #27131]  INFO -- : StoresControllerTest: test_should_get_edit
+I, [2020-04-02T13:37:06.696268 #27131]  INFO -- : ------------------------------------------
+D, [2020-04-02T13:37:06.697329 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:06.698953 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:06.700628 #27131] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3519674039"], ["active", 1]]
+D, [2020-04-02T13:37:06.702033 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:06.704031 #27131]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 13:37:06 +0000
+I, [2020-04-02T13:37:06.705337 #27131]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T13:37:06.705677 #27131]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T13:37:06.712652 #27131] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:37:06.714881 #27131] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-02T13:37:06.719721 #27131]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T13:37:06.721266 #27131]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (1.1ms)
+I, [2020-04-02T13:37:11.952365 #27131]  INFO -- : Completed 200 OK in 5246ms (Views: 5234.5ms | ActiveRecord: 0.2ms)
+D, [2020-04-02T13:37:11.956089 #27131] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:11.956905 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:11.957229 #27131]  INFO -- : -----------------------------------------
+I, [2020-04-02T13:37:11.957307 #27131]  INFO -- : StoresControllerTest: test_should_get_new
+I, [2020-04-02T13:37:11.957370 #27131]  INFO -- : -----------------------------------------
+D, [2020-04-02T13:37:11.958351 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:11.959938 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:11.961487 #27131] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "6364071252"], ["active", 1]]
+D, [2020-04-02T13:37:11.962888 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:11.964125 #27131]  INFO -- : Started GET "/stores/new" for 127.0.0.1 at 2020-04-02 13:37:11 +0000
+I, [2020-04-02T13:37:11.965303 #27131]  INFO -- : Processing by StoresController#new as HTML
+I, [2020-04-02T13:37:11.967689 #27131]  INFO -- :   Rendering stores/new.html.erb within layouts/application
+I, [2020-04-02T13:37:11.968467 #27131]  INFO -- :   Rendered stores/new.html.erb within layouts/application (0.4ms)
+I, [2020-04-02T13:37:11.970387 #27131]  INFO -- : Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+D, [2020-04-02T13:37:11.972864 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:11.973578 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:11.973906 #27131]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-02T13:37:11.973987 #27131]  INFO -- : StoresControllerTest: test_should_not_create_store_when_inappropriate
+I, [2020-04-02T13:37:11.974061 #27131]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-02T13:37:11.974872 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:11.976348 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:11.977911 #27131] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "7611101599"], ["active", 1]]
+D, [2020-04-02T13:37:11.979331 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:11.986150 #27131]  INFO -- : Started POST "/stores" for 127.0.0.1 at 2020-04-02 13:37:11 +0000
+I, [2020-04-02T13:37:11.987311 #27131]  INFO -- : Processing by StoresController#create as HTML
+I, [2020-04-02T13:37:11.987656 #27131]  INFO -- :   Parameters: {"store"=>{"name"=>nil, "street"=>"Sudberry Dr", "city"=>"Wexford", "state"=>"PA", "zip"=>"15090", "phone"=>"7242682323", "active"=>"true"}}
+D, [2020-04-02T13:37:11.989008 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.250639 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+D, [2020-04-02T13:37:12.252224 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.253329 #27131]  INFO -- :   Rendering stores/new.html.erb within layouts/application
+I, [2020-04-02T13:37:12.253728 #27131]  INFO -- :   Rendered stores/new.html.erb within layouts/application (0.1ms)
+I, [2020-04-02T13:37:12.256024 #27131]  INFO -- : Completed 200 OK in 268ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+D, [2020-04-02T13:37:12.259539 #27131] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:12.260302 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:12.260623 #27131]  INFO -- : ---------------------------------------------------------------
+I, [2020-04-02T13:37:12.260699 #27131]  INFO -- : StoresControllerTest: test_should_update_store_when_appropriate
+I, [2020-04-02T13:37:12.260795 #27131]  INFO -- : ---------------------------------------------------------------
+D, [2020-04-02T13:37:12.261932 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.263408 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.264973 #27131] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "6695919320"], ["active", 1]]
+D, [2020-04-02T13:37:12.266413 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.267698 #27131]  INFO -- : Started PATCH "/stores/1" for 127.0.0.1 at 2020-04-02 13:37:12 +0000
+I, [2020-04-02T13:37:12.268943 #27131]  INFO -- : Processing by StoresController#update as HTML
+I, [2020-04-02T13:37:12.269273 #27131]  INFO -- :   Parameters: {"store"=>{"name"=>"North Hills", "street"=>"Sudberry Dr", "city"=>"Wexford", "state"=>"PA", "zip"=>"15090", "phone"=>"7242682323", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-02T13:37:12.270105 #27131] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.271460 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.273157 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) AND "stores"."id" != ? LIMIT ?[0m  [["name", "North Hills"], ["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.274963 #27131] DEBUG -- :   [1m[36mStore Update (0.1ms)[0m  [1m[33mUPDATE "stores" SET "name" = ?, "street" = ?, "city" = ?, "zip" = ?, "phone" = ? WHERE "stores"."id" = ?[0m  [["name", "North Hills"], ["street", "Sudberry Dr"], ["city", "Wexford"], ["zip", "15090"], ["phone", "7242682323"], ["id", 1]]
+D, [2020-04-02T13:37:12.276330 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.277229 #27131]  INFO -- : Redirected to http://www.example.com/stores/1
+I, [2020-04-02T13:37:12.278282 #27131]  INFO -- : Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+D, [2020-04-02T13:37:12.283047 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:12.283755 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:12.284110 #27131]  INFO -- : -------------------------------------------
+I, [2020-04-02T13:37:12.284203 #27131]  INFO -- : StoresControllerTest: test_should_get_index
+I, [2020-04-02T13:37:12.284274 #27131]  INFO -- : -------------------------------------------
+D, [2020-04-02T13:37:12.285039 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.286331 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.287911 #27131] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "9803467417"], ["active", 1]]
+D, [2020-04-02T13:37:12.289359 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.290416 #27131]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 13:37:12 +0000
+I, [2020-04-02T13:37:12.291342 #27131]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T13:37:12.294042 #27131]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-02T13:37:12.294760 #27131]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T13:37:12.296796 #27131]  INFO -- : Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+D, [2020-04-02T13:37:12.299383 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:12.300018 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:12.300384 #27131]  INFO -- : --------------------------------------------
+I, [2020-04-02T13:37:12.300463 #27131]  INFO -- : StoresControllerTest: test_should_show_store
+I, [2020-04-02T13:37:12.300527 #27131]  INFO -- : --------------------------------------------
+D, [2020-04-02T13:37:12.301348 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.302593 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.304127 #27131] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "3836239960"], ["active", 1]]
+D, [2020-04-02T13:37:12.305556 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.306611 #27131]  INFO -- : Started GET "/stores/1" for 127.0.0.1 at 2020-04-02 13:37:12 +0000
+I, [2020-04-02T13:37:12.307468 #27131]  INFO -- : Processing by StoresController#show as HTML
+I, [2020-04-02T13:37:12.307763 #27131]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T13:37:12.308611 #27131] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-02T13:37:12.327347 #27131]  INFO -- :   Rendering stores/show.html.erb within layouts/application
+I, [2020-04-02T13:37:12.328123 #27131]  INFO -- :   Rendered stores/show.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T13:37:12.330208 #27131]  INFO -- : Completed 200 OK in 22ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+D, [2020-04-02T13:37:12.333840 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:12.334862 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:12.335166 #27131]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-02T13:37:12.335292 #27131]  INFO -- : StoresControllerTest: test_should_not_update_store_when_inappropriate
+I, [2020-04-02T13:37:12.335381 #27131]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-02T13:37:12.336313 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.337723 #27131] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.339340 #27131] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "1787580235"], ["active", 1]]
+D, [2020-04-02T13:37:12.340741 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.341947 #27131]  INFO -- : Started PATCH "/stores/1" for 127.0.0.1 at 2020-04-02 13:37:12 +0000
+I, [2020-04-02T13:37:12.343151 #27131]  INFO -- : Processing by StoresController#update as HTML
+I, [2020-04-02T13:37:12.343574 #27131]  INFO -- :   Parameters: {"store"=>{"name"=>nil, "street"=>"Sudberry Dr", "city"=>"Wexford", "state"=>"PA", "zip"=>"15090", "phone"=>"7242682323", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-02T13:37:12.344434 #27131] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.345782 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.348011 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE "stores"."name" IS NULL AND "stores"."id" != ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.349832 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.350782 #27131]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T13:37:12.351167 #27131]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (0.1ms)
+I, [2020-04-02T13:37:12.353381 #27131]  INFO -- : Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+D, [2020-04-02T13:37:12.357146 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:37:12.357829 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:37:12.358154 #27131]  INFO -- : ---------------------------------------------------------------
+I, [2020-04-02T13:37:12.358287 #27131]  INFO -- : StoresControllerTest: test_should_create_store_when_appropriate
+I, [2020-04-02T13:37:12.358351 #27131]  INFO -- : ---------------------------------------------------------------
+D, [2020-04-02T13:37:12.359133 #27131] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.360409 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.361919 #27131] DEBUG -- :   [1m[36mStore Create (0.3ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "6147096886"], ["active", 1]]
+D, [2020-04-02T13:37:12.363401 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.364383 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores"[0m
+I, [2020-04-02T13:37:12.365609 #27131]  INFO -- : Started POST "/stores" for 127.0.0.1 at 2020-04-02 13:37:12 +0000
+I, [2020-04-02T13:37:12.366534 #27131]  INFO -- : Processing by StoresController#create as HTML
+I, [2020-04-02T13:37:12.366832 #27131]  INFO -- :   Parameters: {"store"=>{"name"=>"North Hills", "street"=>"Sudberry Dr", "city"=>"Wexford", "state"=>"PA", "zip"=>"15090", "phone"=>"7242682323", "active"=>"true"}}
+D, [2020-04-02T13:37:12.367958 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:37:12.369322 #27131] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "North Hills"], ["LIMIT", 1]]
+D, [2020-04-02T13:37:12.370736 #27131] DEBUG -- :   [1m[36mStore Create (0.1ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "North Hills"], ["street", "Sudberry Dr"], ["city", "Wexford"], ["state", "PA"], ["zip", "15090"], ["phone", "7242682323"], ["active", 1]]
+D, [2020-04-02T13:37:12.372203 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:37:12.373057 #27131]  INFO -- : Redirected to http://www.example.com/stores/2
+I, [2020-04-02T13:37:12.374132 #27131]  INFO -- : Completed 302 Found in 7ms (ActiveRecord: 0.3ms)
+D, [2020-04-02T13:37:12.378417 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores"[0m
+D, [2020-04-02T13:37:12.379487 #27131] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" ORDER BY "stores"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2020-04-02T13:37:12.380524 #27131] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.123552 #27399] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T13:39:09.243943 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.245476 #27399]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-02T13:39:09.245519 #27399]  INFO -- : EmployeesControllerTest: test_should_create_employee_when_appropriate
+I, [2020-04-02T13:39:09.245544 #27399]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-02T13:39:09.359058 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.362134 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "128277599"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.363733 #27399] DEBUG -- :   [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "128277599"], ["date_of_birth", "2001-04-02"], ["phone", "0588167387"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.364933 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.365739 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+I, [2020-04-02T13:39:09.373165 #27399]  INFO -- : Started POST "/employees" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.380494 #27399]  INFO -- : Processing by EmployeesController#create as HTML
+I, [2020-04-02T13:39:09.380794 #27399]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Ezra", "last_name"=>"Bridger", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"2001-04-02", "role"=>"employee", "active"=>"true"}}
+D, [2020-04-02T13:39:09.385923 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.387558 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "037201234"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.389181 #27399] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ezra"], ["last_name", "Bridger"], ["ssn", "037201234"], ["date_of_birth", "2001-04-02"], ["phone", "4122683259"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.390607 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.391594 #27399]  INFO -- : Redirected to http://www.example.com/employees/2
+I, [2020-04-02T13:39:09.392673 #27399]  INFO -- : Completed 302 Found in 12ms (ActiveRecord: 0.3ms)
+D, [2020-04-02T13:39:09.399113 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+D, [2020-04-02T13:39:09.400218 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2020-04-02T13:39:09.402771 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.403593 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.403926 #27399]  INFO -- : ------------------------------------------------------------------------------
+I, [2020-04-02T13:39:09.404003 #27399]  INFO -- : EmployeesControllerTest: test_should_not_have_the_ability_to_destroy_employees
+I, [2020-04-02T13:39:09.404068 #27399]  INFO -- : ------------------------------------------------------------------------------
+D, [2020-04-02T13:39:09.405031 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.406498 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "126612397"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.408033 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "126612397"], ["date_of_birth", "2001-04-02"], ["phone", "0386851437"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.409328 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.410362 #27399]  INFO -- : Started DELETE "/employees/1" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+F, [2020-04-02T13:39:09.426313 #27399] FATAL -- : 
+AbstractController::ActionNotFound - The action 'destroy' could not be found for EmployeesController:
+  test/controllers/employees_controller_test.rb:64:in `block in <class:EmployeesControllerTest>'
+
+D, [2020-04-02T13:39:09.429792 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.430500 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.430824 #27399]  INFO -- : ---------------------------------------------
+I, [2020-04-02T13:39:09.430900 #27399]  INFO -- : EmployeesControllerTest: test_should_get_edit
+I, [2020-04-02T13:39:09.430983 #27399]  INFO -- : ---------------------------------------------
+D, [2020-04-02T13:39:09.431992 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.433478 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "298570930"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.435011 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "298570930"], ["date_of_birth", "2001-04-02"], ["phone", "1136858602"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.436408 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.437588 #27399]  INFO -- : Started GET "/employees/1/edit" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.438526 #27399]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-02T13:39:09.438830 #27399]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T13:39:09.440126 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.441343 #27399] DEBUG -- :   [1m[36mCACHE Employee Load (0.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-02T13:39:09.445091 #27399]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T13:39:09.592315 #27399]  INFO -- :   Rendered employees/_form.html.erb (145.2ms)
+I, [2020-04-02T13:39:09.592953 #27399]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (147.5ms)
+I, [2020-04-02T13:39:09.762981 #27399]  INFO -- : Completed 200 OK in 324ms (Views: 319.5ms | ActiveRecord: 0.1ms)
+D, [2020-04-02T13:39:09.766744 #27399] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.767543 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.767848 #27399]  INFO -- : ----------------------------------------------
+I, [2020-04-02T13:39:09.767937 #27399]  INFO -- : EmployeesControllerTest: test_should_get_index
+I, [2020-04-02T13:39:09.768006 #27399]  INFO -- : ----------------------------------------------
+D, [2020-04-02T13:39:09.769248 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.770975 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "088812285"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.772577 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "088812285"], ["date_of_birth", "2001-04-02"], ["phone", "8475469734"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.773971 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.775148 #27399]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.776179 #27399]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T13:39:09.778519 #27399]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T13:39:09.780004 #27399] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+I, [2020-04-02T13:39:09.781402 #27399]  INFO -- :   Rendered employees/index.html.erb within layouts/application (2.5ms)
+I, [2020-04-02T13:39:09.783195 #27399]  INFO -- : Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.2ms)
+D, [2020-04-02T13:39:09.786022 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.786684 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.786993 #27399]  INFO -- : --------------------------------------------
+I, [2020-04-02T13:39:09.787068 #27399]  INFO -- : EmployeesControllerTest: test_should_get_new
+I, [2020-04-02T13:39:09.787130 #27399]  INFO -- : --------------------------------------------
+D, [2020-04-02T13:39:09.788102 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.789507 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "246737326"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.791027 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "246737326"], ["date_of_birth", "2001-04-02"], ["phone", "5135368612"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.792358 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.793376 #27399]  INFO -- : Started GET "/employees/new" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.794314 #27399]  INFO -- : Processing by EmployeesController#new as HTML
+I, [2020-04-02T13:39:09.795932 #27399]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-02T13:39:09.796564 #27399]  INFO -- :   Rendered employees/new.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T13:39:09.798371 #27399]  INFO -- : Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.0ms)
+D, [2020-04-02T13:39:09.800638 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.801283 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.801657 #27399]  INFO -- : ---------------------------------------------------------------------------
+I, [2020-04-02T13:39:09.801733 #27399]  INFO -- : EmployeesControllerTest: test_should_not_update_employee_when_inappropriate
+I, [2020-04-02T13:39:09.801797 #27399]  INFO -- : ---------------------------------------------------------------------------
+D, [2020-04-02T13:39:09.802687 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.804208 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "324165911"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.805784 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "324165911"], ["date_of_birth", "2001-04-02"], ["phone", "6282784886"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.807076 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.808335 #27399]  INFO -- : Started PATCH "/employees/1" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.809405 #27399]  INFO -- : Processing by EmployeesController#update as HTML
+I, [2020-04-02T13:39:09.809707 #27399]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Mark", "last_name"=>nil, "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"1994-04-02", "role"=>"employee", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-02T13:39:09.810495 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.811806 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.814280 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "037201234"], ["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.816131 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.817011 #27399]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-02T13:39:09.821622 #27399]  INFO -- :   Rendered employees/_form.html.erb (4.1ms)
+I, [2020-04-02T13:39:09.822200 #27399]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (4.8ms)
+I, [2020-04-02T13:39:09.824171 #27399]  INFO -- : Completed 200 OK in 14ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+D, [2020-04-02T13:39:09.827876 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.828541 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.828835 #27399]  INFO -- : --------------------------------------------------
+I, [2020-04-02T13:39:09.828924 #27399]  INFO -- : EmployeesControllerTest: test_should_show_employee
+I, [2020-04-02T13:39:09.828989 #27399]  INFO -- : --------------------------------------------------
+D, [2020-04-02T13:39:09.829870 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.831322 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "143273775"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.832766 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "143273775"], ["date_of_birth", "2001-04-02"], ["phone", "0511456984"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.834123 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.847058 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.848598 #27399] DEBUG -- :   [1m[36mStore Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.850059 #27399] DEBUG -- :   [1m[36mStore Create (0.1ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "5404274701"], ["active", 1]]
+D, [2020-04-02T13:39:09.851365 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.867502 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.869064 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:39:09.870346 #27399] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T13:39:09.871575 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.879430 #27399] DEBUG -- :   [1m[36mAssignment Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.880728 #27399] DEBUG -- :   [1m[36mAssignment Create (0.2ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-02"]]
+D, [2020-04-02T13:39:09.881760 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.882935 #27399]  INFO -- : Started GET "/employees/1" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.883896 #27399]  INFO -- : Processing by EmployeesController#show as HTML
+I, [2020-04-02T13:39:09.884251 #27399]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T13:39:09.885094 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-02T13:39:09.887890 #27399]  INFO -- :   Rendering employees/show.html.erb within layouts/application
+I, [2020-04-02T13:39:09.888606 #27399]  INFO -- :   Rendered employees/show.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T13:39:09.890460 #27399]  INFO -- : Completed 200 OK in 6ms (Views: 2.4ms | ActiveRecord: 0.1ms)
+D, [2020-04-02T13:39:09.916303 #27399] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.917448 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.917749 #27399]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-02T13:39:09.917822 #27399]  INFO -- : EmployeesControllerTest: test_should_update_employee_when_appropriate
+I, [2020-04-02T13:39:09.917880 #27399]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-02T13:39:09.919123 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.920883 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "025694760"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.922551 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "025694760"], ["date_of_birth", "2001-04-02"], ["phone", "7713669448"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.924114 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.925580 #27399]  INFO -- : Started PATCH "/employees/1" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.926781 #27399]  INFO -- : Processing by EmployeesController#update as HTML
+I, [2020-04-02T13:39:09.927165 #27399]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Mark", "last_name"=>"Heimann", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"1994-04-02", "role"=>"employee", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-02T13:39:09.928051 #27399] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.929521 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.931742 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "037201234"], ["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.933676 #27399] DEBUG -- :   [1m[36mEmployee Update (0.1ms)[0m  [1m[33mUPDATE "employees" SET "first_name" = ?, "last_name" = ?, "ssn" = ?, "phone" = ?, "date_of_birth" = ? WHERE "employees"."id" = ?[0m  [["first_name", "Mark"], ["last_name", "Heimann"], ["ssn", "037201234"], ["phone", "4122683259"], ["date_of_birth", "1994-04-02"], ["id", 1]]
+D, [2020-04-02T13:39:09.935175 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.936051 #27399]  INFO -- : Redirected to http://www.example.com/employees/1
+I, [2020-04-02T13:39:09.937162 #27399]  INFO -- : Completed 302 Found in 10ms (ActiveRecord: 0.4ms)
+D, [2020-04-02T13:39:09.942383 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-02T13:39:09.943136 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-02T13:39:09.943548 #27399]  INFO -- : ---------------------------------------------------------------------------
+I, [2020-04-02T13:39:09.943627 #27399]  INFO -- : EmployeesControllerTest: test_should_not_create_employee_when_inappropriate
+I, [2020-04-02T13:39:09.943687 #27399]  INFO -- : ---------------------------------------------------------------------------
+D, [2020-04-02T13:39:09.944677 #27399] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.946163 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "249743942"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.947819 #27399] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "249743942"], ["date_of_birth", "2001-04-02"], ["phone", "5428538801"], ["role", "employee"], ["active", 1]]
+D, [2020-04-02T13:39:09.949227 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.950746 #27399]  INFO -- : Started POST "/employees" for 127.0.0.1 at 2020-04-02 13:39:09 +0000
+I, [2020-04-02T13:39:09.951723 #27399]  INFO -- : Processing by EmployeesController#create as HTML
+I, [2020-04-02T13:39:09.952077 #27399]  INFO -- :   Parameters: {"employee"=>{"first_name"=>nil, "last_name"=>"Bridger", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"2001-04-02", "role"=>"employee", "active"=>"true"}}
+D, [2020-04-02T13:39:09.953230 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-02T13:39:09.955454 #27399] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "037201234"], ["LIMIT", 1]]
+D, [2020-04-02T13:39:09.957006 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-02T13:39:09.958181 #27399]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-02T13:39:09.958577 #27399]  INFO -- :   Rendered employees/new.html.erb within layouts/application (0.1ms)
+I, [2020-04-02T13:39:09.960824 #27399]  INFO -- : Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 0.2ms)
+D, [2020-04-02T13:39:09.964318 #27399] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m

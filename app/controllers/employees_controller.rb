@@ -9,8 +9,8 @@ class EmployeesController < ApplicationController
     end
     
     def show
-        @current_assignment = Employee.current_assignment
-        @previous_assignment = Employee.assignments.past
+        @current_assignment = @employee.assignments.current
+        @previous_assignment = @employee.assignments.past
     end
     
     def new

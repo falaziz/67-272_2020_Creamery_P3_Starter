@@ -9,6 +9,8 @@ class StoresController < ApplicationController
     end
     
     def show
+        @current_managers = @store.assignments.for_role('manager')
+        @current_managers = @store.assignments.for_role('employee')
     end
     
     def new

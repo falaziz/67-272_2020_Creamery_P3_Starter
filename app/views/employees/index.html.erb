@@ -1,2 +1,33 @@
-<h1>Employees#index</h1>
-<p>Find me in app/views/employees/index.html.erb</p>
+<h2>PATS Employees</h2>
+
+<table class="striped">
+  <tr>
+    <th>Name</th>
+    <th>SSN</th>
+	<th>Date of Birth</th>
+	<th>Phone</th>
+	<th>Role</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employees.each do |employee| %>
+  <tr>
+    <td><%= link_to employee.proper_name, employee_path(employee) %></td>
+    <td><%= employee.ssn %></td>
+    <td><%= employee.date_of_birth %></td>
+    <td><%= employee.phone %></td>
+    <td><%= employee.role %></td>
+    <td><%= link_to 'Edit', edit_employee_path(employee), :class=> "waves-effect waves-light btn light-blue" %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<!-- Add the pagination using will_paginate gem -->
+<span class="paginate">
+<%= will_paginate @books, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>
+
+<br />
+

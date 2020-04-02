@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>A GREAT TITLE GOES HERE; DO NOT FORGET</title>
-    <%= csrf_meta_tags %>
-    
-  </head>
+<head>
+  <title>PATS :: <%= controller.controller_name.capitalize %> - <%= controller.action_name.capitalize %></title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
 
-  <body>
-    <%= yield %>   
-  </body>
+<nav>
+  
+</nav>
+  <div class="row">
+    <div class="col s7 left">
+      <!-- MAIN CONTENT GOES HERE -->
+      <%= yield %>
+    </div>
+
+    <div class="col s7 center">
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="row">
+      <div class="col s8 left">
+          © Naufal Aziz
+      </div>
+    </div> 
+  </footer>  
+</body>
+<%= javascript_include_tag "application" %>
+<% flash.each do |message_type, message| %>
+    <%= javascript_tag "Materialize.toast('#{message}', 4000)" %>
+<% end %>
 </html>

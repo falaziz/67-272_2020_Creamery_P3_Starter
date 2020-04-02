@@ -1,0 +1,48 @@
+<%= form_for(@employee) do |form| %>
+  <% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> prohibited this employee from being saved:</h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-field">
+    <%= form.label :first_name %>
+    <%= form.text_field :first_name %>
+  </div>
+
+  <div class="input-field">
+    <%= form.label :last_name %>
+    <%= form.text_field :last_name %>
+  </div>
+
+  <div class="input-field">
+    <%= form.label :ssn %>
+    <%= form.text_field :ssn %>
+  </div>
+
+  <div class="input">
+	<%= form.label :date_of_birth %><br />
+	<%= form.date_select :date_of_birth, :order => [:month, :day, :year], :prompt => true %>
+  </div>
+  
+  <div class="input-field">
+    <%= form.label :phone %>
+    <%= form.text_field :phone %>
+  </div>
+
+  <div class="input-field">
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="actions">
+	<%= form.submit :class=>"btn waves-effect waves-light" %><br />
+	<%= link_to 'Cancel', employees_path, :class => 'waves-effect waves-light btn red' %>
+  </div>
+<% end %>

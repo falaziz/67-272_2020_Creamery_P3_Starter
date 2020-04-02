@@ -3,6 +3,7 @@ class AssignmentsController < ApplicationController
     
     def terminate
         @assignment.end_date = Date.today
+        redirect_to assignments_url
     end
     
     def index
