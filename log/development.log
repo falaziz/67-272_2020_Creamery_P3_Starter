@@ -2697,3 +2697,433 @@ I, [2020-04-02T15:29:38.192007 #1228]  INFO -- :   Rendered partials/_footer.htm
 I, [2020-04-02T15:29:38.261685 #1228]  INFO -- : Completed 200 OK in 112ms (Views: 107.0ms | ActiveRecord: 2.0ms)
 
 
+I, [2020-04-02T15:41:06.863874 #3369]  INFO -- : Started GET "/assignments?page=1" for 127.0.0.1 at 2020-04-02 15:41:06 +0000
+D, [2020-04-02T15:41:06.876976 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T15:41:06.877117 #3369] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:41:06.885832 #3369]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:41:06.886020 #3369]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-02T15:41:06.898317 #3369]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:41:06.902352 #3369] DEBUG -- :   [1m[36mAssignment Load (2.1ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:41:06.902779 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:41:06.923127 #3369] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.923578 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:41:06.938840 #3369] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.939268 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:41:06.947401 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.947862 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:41:06.949325 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.949771 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:41:06.951393 #3369] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.951859 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:41:06.953338 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.953829 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:41:06.955432 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.955861 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:41:06.957359 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.957826 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:41:06.959422 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.960153 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:41:06.961724 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:41:06.962239 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:41:06.964084 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:41:06.964689 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:41:07.083852 #3369]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (185.0ms)
+I, [2020-04-02T15:41:07.248898 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:41:07.364770 #3369]  INFO -- : Completed 200 OK in 478ms (Views: 462.5ms | ActiveRecord: 5.2ms)
+
+
+I, [2020-04-02T15:41:10.079103 #3369]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:41:10 +0000
+I, [2020-04-02T15:41:10.084084 #3369]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:41:10.089017 #3369]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:41:10.090763 #3369] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:41:10.091145 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:41:10.093562 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:41:10.093990 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:41:10.096187 #3369]  INFO -- :   Rendered stores/index.html.erb within layouts/application (6.2ms)
+I, [2020-04-02T15:41:10.129524 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:41:10.202296 #3369]  INFO -- : Completed 200 OK in 118ms (Views: 113.8ms | ActiveRecord: 0.4ms)
+
+
+I, [2020-04-02T15:41:12.536477 #3369]  INFO -- : Started GET "/stores/1" for 127.0.0.1 at 2020-04-02 15:41:12 +0000
+I, [2020-04-02T15:41:12.537993 #3369]  INFO -- : Processing by StoresController#show as HTML
+I, [2020-04-02T15:41:12.538176 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:41:12.539782 #3369] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:41:12.540169 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+I, [2020-04-02T15:41:12.548854 #3369]  INFO -- :   Rendering stores/show.html.erb within layouts/application
+I, [2020-04-02T15:41:12.549530 #3369]  INFO -- :   Rendered stores/show.html.erb within layouts/application (0.3ms)
+I, [2020-04-02T15:41:12.559268 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:41:12.682303 #3369]  INFO -- : Completed 200 OK in 144ms (Views: 134.0ms | ActiveRecord: 0.2ms)
+
+
+I, [2020-04-02T15:41:17.390209 #3369]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 15:41:17 +0000
+I, [2020-04-02T15:41:17.393322 #3369]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T15:41:17.394385 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:41:17.397633 #3369] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:41:17.399429 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+D, [2020-04-02T15:41:17.403186 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:41:17.404933 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:30
+I, [2020-04-02T15:41:17.416105 #3369]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T15:41:17.417459 #3369]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (0.6ms)
+I, [2020-04-02T15:41:17.449641 #3369]  INFO -- :   Rendered partials/_footer.html.erb (1.0ms)
+I, [2020-04-02T15:41:17.572304 #3369]  INFO -- : Completed 200 OK in 177ms (Views: 161.6ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T15:42:20.034327 #3369]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 15:42:20 +0000
+I, [2020-04-02T15:42:20.036226 #3369]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T15:42:20.036513 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:42:20.038039 #3369] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:42:20.038573 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+D, [2020-04-02T15:42:20.040151 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:42:20.040708 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:30
+I, [2020-04-02T15:42:20.043343 #3369]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T15:42:20.130653 #3369]  INFO -- :   Rendered stores/_form.html.erb (85.9ms)
+I, [2020-04-02T15:42:20.131017 #3369]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (87.4ms)
+I, [2020-04-02T15:42:20.140102 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:42:20.220076 #3369]  INFO -- : Completed 200 OK in 183ms (Views: 177.2ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T15:43:05.371106 #3369]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 15:43:05 +0000
+I, [2020-04-02T15:43:05.372706 #3369]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T15:43:05.372900 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:43:05.374089 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:05.374517 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+D, [2020-04-02T15:43:05.375717 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:05.376176 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:30
+I, [2020-04-02T15:43:05.378826 #3369]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T15:43:05.398867 #3369]  INFO -- :   Rendered stores/_form.html.erb (18.6ms)
+I, [2020-04-02T15:43:05.399268 #3369]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (20.1ms)
+I, [2020-04-02T15:43:05.408487 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:43:05.481263 #3369]  INFO -- : Completed 200 OK in 108ms (Views: 102.9ms | ActiveRecord: 0.2ms)
+
+
+I, [2020-04-02T15:43:38.702325 #3369]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 15:43:38 +0000
+I, [2020-04-02T15:43:38.704640 #3369]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T15:43:38.704974 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:43:38.707010 #3369] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:38.707501 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+D, [2020-04-02T15:43:38.708856 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:38.713420 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:30
+I, [2020-04-02T15:43:38.716249 #3369]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T15:43:38.738218 #3369]  INFO -- :   Rendered stores/_form.html.erb (20.8ms)
+I, [2020-04-02T15:43:38.738559 #3369]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (22.0ms)
+I, [2020-04-02T15:43:38.747735 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:43:38.820628 #3369]  INFO -- : Completed 200 OK in 115ms (Views: 105.1ms | ActiveRecord: 0.2ms)
+
+
+I, [2020-04-02T15:43:51.703088 #3369]  INFO -- : Started GET "/stores/1/edit" for 127.0.0.1 at 2020-04-02 15:43:51 +0000
+I, [2020-04-02T15:43:51.705292 #3369]  INFO -- : Processing by StoresController#edit as HTML
+I, [2020-04-02T15:43:51.705621 #3369]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-02T15:43:51.707525 #3369] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:51.708179 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:43
+D, [2020-04-02T15:43:51.710166 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:43:51.710835 #3369] DEBUG -- :   ↳ app/controllers/stores_controller.rb:30
+I, [2020-04-02T15:43:51.714854 #3369]  INFO -- :   Rendering stores/edit.html.erb within layouts/application
+I, [2020-04-02T15:43:51.731636 #3369]  INFO -- :   Rendered stores/_form.html.erb (15.4ms)
+I, [2020-04-02T15:43:51.731979 #3369]  INFO -- :   Rendered stores/edit.html.erb within layouts/application (16.9ms)
+I, [2020-04-02T15:43:51.740939 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:43:51.814197 #3369]  INFO -- : Completed 200 OK in 108ms (Views: 100.2ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-02T15:44:21.235115 #3369]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 15:44:21 +0000
+I, [2020-04-02T15:44:21.253155 #3369]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:44:21.257130 #3369]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:44:21.259445 #3369] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:44:21.259898 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:44:21.262520 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:44:21.263023 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:44:21.266670 #3369]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.2ms)
+I, [2020-04-02T15:44:21.277073 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:44:21.365286 #3369]  INFO -- : Completed 200 OK in 112ms (Views: 108.3ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T15:46:32.820397 #3369]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 15:46:32 +0000
+I, [2020-04-02T15:46:32.822778 #3369]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:46:32.829120 #3369]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:46:32.831824 #3369] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:46:32.832334 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:46:32.835067 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:46:32.835630 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:46:32.839303 #3369]  INFO -- :   Rendered employees/index.html.erb within layouts/application (9.8ms)
+I, [2020-04-02T15:46:32.848973 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:46:32.923152 #3369]  INFO -- : Completed 200 OK in 100ms (Views: 95.6ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T15:46:35.889811 #3369]  INFO -- : Started GET "/employees/new" for 127.0.0.1 at 2020-04-02 15:46:35 +0000
+I, [2020-04-02T15:46:35.892670 #3369]  INFO -- : Processing by EmployeesController#new as HTML
+I, [2020-04-02T15:46:35.897723 #3369]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-02T15:46:35.922180 #3369]  INFO -- :   Rendered employees/_form.html.erb (23.0ms)
+I, [2020-04-02T15:46:35.922725 #3369]  INFO -- :   Rendered employees/new.html.erb within layouts/application (24.7ms)
+I, [2020-04-02T15:46:35.932472 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:46:36.007919 #3369]  INFO -- : Completed 200 OK in 115ms (Views: 111.8ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T15:46:43.980970 #3369]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:46:43 +0000
+I, [2020-04-02T15:46:43.983147 #3369]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:46:43.988832 #3369]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:46:43.991911 #3369] DEBUG -- :   [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:46:43.992383 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:46:43.994863 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:46:43.995355 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:46:43.996900 #3369]  INFO -- :   Rendered stores/index.html.erb within layouts/application (7.7ms)
+I, [2020-04-02T15:46:44.006068 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:46:44.080484 #3369]  INFO -- : Completed 200 OK in 97ms (Views: 93.1ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T15:46:46.593280 #3369]  INFO -- : Started GET "/stores/new" for 127.0.0.1 at 2020-04-02 15:46:46 +0000
+I, [2020-04-02T15:46:46.595533 #3369]  INFO -- : Processing by StoresController#new as HTML
+I, [2020-04-02T15:46:46.603131 #3369]  INFO -- :   Rendering stores/new.html.erb within layouts/application
+I, [2020-04-02T15:46:46.624466 #3369]  INFO -- :   Rendered stores/_form.html.erb (19.3ms)
+I, [2020-04-02T15:46:46.624950 #3369]  INFO -- :   Rendered stores/new.html.erb within layouts/application (21.5ms)
+I, [2020-04-02T15:46:46.634226 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:46:46.705781 #3369]  INFO -- : Completed 200 OK in 110ms (Views: 107.0ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T15:47:02.135147 #3369]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:47:02 +0000
+I, [2020-04-02T15:47:02.137471 #3369]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:47:02.143387 #3369]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:47:02.146304 #3369] DEBUG -- :   [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:47:02.146823 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:47:02.149355 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:47:02.149852 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:47:02.151528 #3369]  INFO -- :   Rendered stores/index.html.erb within layouts/application (7.7ms)
+I, [2020-04-02T15:47:02.161175 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:47:02.237149 #3369]  INFO -- : Completed 200 OK in 99ms (Views: 95.1ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T15:47:03.809720 #3369]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:47:03 +0000
+I, [2020-04-02T15:47:03.811138 #3369]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:47:03.814288 #3369]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:47:03.816510 #3369] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:47:03.816986 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:47:03.818820 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.819340 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:47:03.821120 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.821656 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:47:03.823379 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.823922 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:47:03.825513 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.826110 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:47:03.827866 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.828397 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:47:03.830136 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.830706 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:47:03.832505 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.833044 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:47:03.834700 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.835272 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:47:03.837147 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.837682 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:47:03.842815 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:47:03.843292 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:47:03.845080 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:47:03.845562 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:47:03.849133 #3369]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (34.5ms)
+I, [2020-04-02T15:47:03.859484 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:47:03.935451 #3369]  INFO -- : Completed 200 OK in 124ms (Views: 119.6ms | ActiveRecord: 1.7ms)
+
+
+I, [2020-04-02T15:47:09.247773 #3369]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:47:09 +0000
+I, [2020-04-02T15:47:09.250154 #3369]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:47:09.254644 #3369]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:47:09.257380 #3369] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:47:09.258171 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:47:09.261548 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:47:09.262096 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:47:09.265830 #3369]  INFO -- :   Rendered employees/index.html.erb within layouts/application (10.8ms)
+I, [2020-04-02T15:47:09.276168 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:47:09.353819 #3369]  INFO -- : Completed 200 OK in 103ms (Views: 99.6ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T15:48:04.269447 #3369]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:48:04 +0000
+I, [2020-04-02T15:48:04.272035 #3369]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:48:04.275909 #3369]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:48:04.278071 #3369] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:48:04.278711 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:48:04.281368 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:48:04.282045 #3369] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:48:04.283912 #3369]  INFO -- :   Rendered stores/index.html.erb within layouts/application (7.6ms)
+I, [2020-04-02T15:48:04.293452 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:48:04.373611 #3369]  INFO -- : Completed 200 OK in 98ms (Views: 94.5ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-02T15:48:07.290091 #3369]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-02 15:48:07 +0000
+I, [2020-04-02T15:48:07.291637 #3369]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:48:07.295890 #3369]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:48:07.298701 #3369] DEBUG -- :   [1m[36mEmployee Load (0.6ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:48:07.299565 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:48:07.302772 #3369] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:48:07.303313 #3369] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:48:07.307517 #3369]  INFO -- :   Rendered employees/index.html.erb within layouts/application (11.3ms)
+I, [2020-04-02T15:48:07.316734 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:48:07.386095 #3369]  INFO -- : Completed 200 OK in 94ms (Views: 90.4ms | ActiveRecord: 0.8ms)
+
+
+I, [2020-04-02T15:48:10.426576 #3369]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:48:10 +0000
+I, [2020-04-02T15:48:10.428821 #3369]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:48:10.433470 #3369]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:48:10.436450 #3369] DEBUG -- :   [1m[36mAssignment Load (1.0ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:48:10.437185 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:48:10.439637 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.440195 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:48:10.441970 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.442445 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:48:10.444152 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.444648 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:48:10.446168 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.446660 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:48:10.448389 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.448904 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:48:10.450419 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.450913 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:48:10.452659 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.453158 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:48:10.454615 #3369] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.455103 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:48:10.456891 #3369] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.457382 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:48:10.458866 #3369] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:48:10.459363 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:48:10.460968 #3369] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:48:10.461467 #3369] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:48:10.464866 #3369]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (31.0ms)
+I, [2020-04-02T15:48:10.474029 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:48:10.547123 #3369]  INFO -- : Completed 200 OK in 118ms (Views: 113.2ms | ActiveRecord: 2.1ms)
+
+
+I, [2020-04-02T15:48:49.463127 #3369]  INFO -- : Started GET "/stores/new" for 127.0.0.1 at 2020-04-02 15:48:49 +0000
+I, [2020-04-02T15:48:49.465520 #3369]  INFO -- : Processing by StoresController#new as HTML
+I, [2020-04-02T15:48:49.468908 #3369]  INFO -- :   Rendering stores/new.html.erb within layouts/application
+I, [2020-04-02T15:48:49.490337 #3369]  INFO -- :   Rendered stores/_form.html.erb (20.0ms)
+I, [2020-04-02T15:48:49.490822 #3369]  INFO -- :   Rendered stores/new.html.erb within layouts/application (21.6ms)
+I, [2020-04-02T15:48:49.500885 #3369]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T15:48:49.581307 #3369]  INFO -- : Completed 200 OK in 115ms (Views: 112.9ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-02T15:55:05.863820 #4306]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:55:05 +0000
+D, [2020-04-02T15:55:05.877622 #4306] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-02T15:55:05.877773 #4306] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-02T15:55:05.887107 #4306]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:55:05.900362 #4306]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:55:05.903044 #4306] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:55:05.903478 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:55:05.925796 #4306] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.926304 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:05.943987 #4306] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.944437 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:05.953593 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.954104 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:05.955686 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.956200 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:05.957808 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.958273 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:05.959842 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.960342 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:05.961977 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.962487 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:05.964180 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.964648 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:05.966301 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.966799 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:05.968282 #4306] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:55:05.968773 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:05.970544 #4306] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:55:05.971053 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:55:06.090040 #4306]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (189.3ms)
+I, [2020-04-02T15:55:06.270810 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:55:06.362754 #4306]  INFO -- : Completed 200 OK in 475ms (Views: 460.1ms | ActiveRecord: 3.8ms)
+
+
+I, [2020-04-02T15:55:09.909000 #4306]  INFO -- : Started GET "/assignments/new" for 127.0.0.1 at 2020-04-02 15:55:09 +0000
+I, [2020-04-02T15:55:09.911024 #4306]  INFO -- : Processing by AssignmentsController#new as HTML
+I, [2020-04-02T15:55:09.914194 #4306]  INFO -- :   Rendering assignments/new.html.erb within layouts/application
+D, [2020-04-02T15:55:09.951612 #4306] DEBUG -- :   [1m[36mEmployee Load (1.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name[0m  [["active", 1]]
+D, [2020-04-02T15:55:09.952118 #4306] DEBUG -- :   ↳ app/views/assignments/_form.html.erb:7
+D, [2020-04-02T15:55:09.969308 #4306] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name[0m  [["active", 1]]
+D, [2020-04-02T15:55:09.969966 #4306] DEBUG -- :   ↳ app/views/assignments/_form.html.erb:8
+I, [2020-04-02T15:55:09.978073 #4306]  INFO -- :   Rendered assignments/_form.html.erb (62.3ms)
+I, [2020-04-02T15:55:09.978567 #4306]  INFO -- :   Rendered assignments/new.html.erb within layouts/application (64.0ms)
+I, [2020-04-02T15:55:09.988686 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:55:10.069937 #4306]  INFO -- : Completed 200 OK in 158ms (Views: 153.4ms | ActiveRecord: 1.3ms)
+
+
+I, [2020-04-02T15:55:52.202450 #4306]  INFO -- : Started GET "/" for 127.0.0.1 at 2020-04-02 15:55:52 +0000
+I, [2020-04-02T15:55:52.237330 #4306]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-02T15:55:52.241858 #4306]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+D, [2020-04-02T15:55:52.244236 #4306] DEBUG -- :   [1m[36mEmployee Load (0.5ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:55:52.244898 #4306] DEBUG -- :   ↳ app/views/employees/index.html.erb:15
+D, [2020-04-02T15:55:52.248126 #4306] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:55:52.248828 #4306] DEBUG -- :   ↳ app/views/employees/index.html.erb:29
+I, [2020-04-02T15:55:52.253473 #4306]  INFO -- :   Rendered employees/index.html.erb within layouts/application (11.3ms)
+I, [2020-04-02T15:55:52.265455 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T15:55:52.368870 #4306]  INFO -- : Completed 200 OK in 131ms (Views: 126.1ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T15:55:56.598392 #4306]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:55:56 +0000
+I, [2020-04-02T15:55:56.606059 #4306]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:55:56.614812 #4306]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:55:56.620288 #4306] DEBUG -- :   [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:55:56.622074 #4306] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:55:56.631707 #4306] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:55:56.632793 #4306] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:55:56.635954 #4306]  INFO -- :   Rendered stores/index.html.erb within layouts/application (20.6ms)
+I, [2020-04-02T15:55:56.659813 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.9ms)
+I, [2020-04-02T15:55:56.742880 #4306]  INFO -- : Completed 200 OK in 136ms (Views: 131.0ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-02T15:55:59.195995 #4306]  INFO -- : Started GET "/assignments" for 127.0.0.1 at 2020-04-02 15:55:59 +0000
+I, [2020-04-02T15:55:59.198461 #4306]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-02T15:55:59.204353 #4306]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+D, [2020-04-02T15:55:59.206752 #4306] DEBUG -- :   [1m[36mAssignment Load (0.6ms)[0m  [1m[34mSELECT  "assignments".* FROM "assignments" ORDER BY start_date DESC, end_date DESC LIMIT ? OFFSET ?[0m  [["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:55:59.207329 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:12
+D, [2020-04-02T15:55:59.209112 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.209645 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:59.211428 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.212025 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:59.213784 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.214452 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:59.216128 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.216648 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:59.218392 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.218907 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:59.220527 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.221064 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:59.222863 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 49], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.223387 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:59.225152 #4306] DEBUG -- :   [1m[36mStore Load (0.1ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.225658 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:59.227490 #4306] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 63], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.228045 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:14
+D, [2020-04-02T15:55:59.229652 #4306] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2020-04-02T15:55:59.230175 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:15
+D, [2020-04-02T15:55:59.231992 #4306] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
+D, [2020-04-02T15:55:59.232555 #4306] DEBUG -- :   ↳ app/views/assignments/index.html.erb:25
+I, [2020-04-02T15:55:59.236091 #4306]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (31.4ms)
+I, [2020-04-02T15:55:59.246241 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-02T15:55:59.321139 #4306]  INFO -- : Completed 200 OK in 122ms (Views: 117.4ms | ActiveRecord: 1.6ms)
+
+
+I, [2020-04-02T15:56:03.160889 #4306]  INFO -- : Started GET "/stores" for 127.0.0.1 at 2020-04-02 15:56:03 +0000
+I, [2020-04-02T15:56:03.162847 #4306]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-02T15:56:03.167496 #4306]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-02T15:56:03.170158 #4306] DEBUG -- :   [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-02T15:56:03.170907 #4306] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-02T15:56:03.174937 #4306] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-02T15:56:03.175702 #4306] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-02T15:56:03.178122 #4306]  INFO -- :   Rendered stores/index.html.erb within layouts/application (10.1ms)
+I, [2020-04-02T15:56:03.193636 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-02T15:56:03.271401 #4306]  INFO -- : Completed 200 OK in 108ms (Views: 104.6ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-02T15:56:05.582174 #4306]  INFO -- : Started GET "/assignments/new" for 127.0.0.1 at 2020-04-02 15:56:05 +0000
+I, [2020-04-02T15:56:05.584282 #4306]  INFO -- : Processing by AssignmentsController#new as HTML
+I, [2020-04-02T15:56:05.587185 #4306]  INFO -- :   Rendering assignments/new.html.erb within layouts/application
+D, [2020-04-02T15:56:05.591397 #4306] DEBUG -- :   [1m[36mEmployee Load (1.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ? ORDER BY last_name, first_name[0m  [["active", 1]]
+D, [2020-04-02T15:56:05.591984 #4306] DEBUG -- :   ↳ app/views/assignments/_form.html.erb:7
+D, [2020-04-02T15:56:05.612198 #4306] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name[0m  [["active", 1]]
+D, [2020-04-02T15:56:05.612754 #4306] DEBUG -- :   ↳ app/views/assignments/_form.html.erb:8
+I, [2020-04-02T15:56:05.617268 #4306]  INFO -- :   Rendered assignments/_form.html.erb (28.7ms)
+I, [2020-04-02T15:56:05.617719 #4306]  INFO -- :   Rendered assignments/new.html.erb within layouts/application (30.2ms)
+I, [2020-04-02T15:56:05.627576 #4306]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-02T15:56:05.707267 #4306]  INFO -- : Completed 200 OK in 122ms (Views: 118.5ms | ActiveRecord: 1.5ms)
+
+
