@@ -1,5 +1,5 @@
 class AssignmentsController < ApplicationController
-    before_action :set_assignment, only: [:show, :edit, :update, :destroy]
+    before_action :set_assignment, only: [:show, :destroy]
     
     def terminate
         @assignment.end_date = Date.today
@@ -7,6 +7,8 @@ class AssignmentsController < ApplicationController
     
     def index
         @assignments = Assignment.chronological.paginate(:page => params[:page]).per_page(5)
+        @current_assignments = Assignment.current
+        @past_assignments = Assignment.past
     end
     
     def show
@@ -19,21 +21,9 @@ class AssignmentsController < ApplicationController
     def create
         @assignment = Assignment.new(assignment_params)
         if @assignment.save
-            redirect_to assignment_path(@assignment), notice: "#Succesfully added the assignment."
+            redirect_to assignment_path, notice: "Successfully added the assignment."
         else
             render action: 'new'
-        end
-    end
-    
-    def edit
-        @assignment = Assignment.find(params[:id])
-    end
-    
-    def update
-        if @assignment.update
-            redirect_to assignment_path(@assignment), notice: "Assignment was revised in the system."
-        else
-            render action: 'edit'
         end
     end
     
