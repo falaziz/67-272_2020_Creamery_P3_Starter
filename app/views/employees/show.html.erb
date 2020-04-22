@@ -1,14 +1,10 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @employee.first_name %>
+  <strong>Name:</strong>
+  <%= @employee.proper_name %>
 </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @employee.last_name %>
-</p>
 
 <p>
   <strong>Date of Birth:</strong>
@@ -22,7 +18,7 @@
 
 <p>
   <strong>Phone:</strong>
-  <%= @employee.phone %>
+  <%= number_to_phone @employee.phone %>
 </p>
 
 <p>

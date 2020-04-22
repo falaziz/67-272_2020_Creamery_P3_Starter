@@ -1,2 +1,97 @@
-<h1>Stores#show</h1>
-<p>Find me in app/views/stores/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @store.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= "#{@store.street}, #{@store.city}, #{@store.state}" %>
+</p>
+
+<p>
+  <strong>Role:</strong>
+  <%= @store.zip %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= number_to_phone @store.phone %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @store.active %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@store) %> |
+<%= link_to 'Back', employees_path %>
+
+<br />
+<br />
+
+<% @manager = Assignment.current.for_store(@store).for_role('manager') %>
+<% @employee = Assignment.current.for_store(@store).for_role('employee').paginate(page: params[:page]).per_page(10) %>
+
+<h4>Manager</h4>
+<table class="striped">
+  <tr>
+    <th>Name</th>
+	<th>Date of Birth</th>
+	<th>Phone</th>
+	<th>Start Date</th>
+    <th>End Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @manager.each do |assignment| %>
+  <tr>
+    <td><%= link_to assignment.employee.proper_name, employee_path(assignment.employee_id) %></td>
+    <td><%= assignment.employee.date_of_birth %></td>
+    <td><%= number_to_phone assignment.employee.phone %></td>
+    <td><%= assignment.start_date %></td>
+    <td><%= assignment.end_date %></td>
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Terminate', assignments_terminate_path, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+<br />
+<h4>Employees</h4>
+<table class="striped">
+  <tr>
+    <th>Name</th>
+	<th>Date of Birth</th>
+	<th>Phone</th>
+	<th>Start Date</th>
+    <th>End Date</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @employee.each do |assignment| %>
+  <tr>
+    <td><%= link_to assignment.employee.proper_name, employee_path(assignment.employee_id) %></td>
+    <td><%= assignment.employee.date_of_birth %></td>
+    <td><%= number_to_phone assignment.employee.phone %></td>
+    <td><%= assignment.start_date %></td>
+    <td><%= assignment.end_date %></td>
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Terminate', assignments_terminate_path, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<!-- Add the pagination using will_paginate gem -->
+<span class="paginate">
+<%= will_paginate @employee, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+</span>

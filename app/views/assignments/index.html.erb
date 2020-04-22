@@ -7,6 +7,8 @@
 	<th>Start Date</th>
     <th>End Date</th>
     <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
 <% @current_assignments.each do |assignment| %>
@@ -15,7 +17,9 @@
     <td><%= link_to assignment.store.name, store_path(assignment.store_id)  %></td>
     <td><%= assignment.start_date %></td>
     <td><%= assignment.end_date %></td>
-    <td><%= link_to 'Terminate', assignment_path(assignment), :class=> "waves-effect waves-light btn blue" %></td>
+    <td><%= link_to 'Show', assignment %></td>
+    <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Terminate', assignments_terminate_path, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
