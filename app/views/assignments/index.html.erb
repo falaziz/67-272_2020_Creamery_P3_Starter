@@ -9,7 +9,7 @@
     <th></th>
   </tr>
 
-<% @assignments.each do |assignment| %>
+<% @current_assignments.each do |assignment| %>
   <tr>
     <td><%= link_to assignment.employee.proper_name, employee_path(assignment.employee_id) %></td>
     <td><%= link_to assignment.store.name, store_path(assignment.store_id)  %></td>
@@ -22,7 +22,7 @@
 <br />
 <!-- Add the pagination using will_paginate gem -->
 <span class="paginate">
-<%= will_paginate @books, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+<%= will_paginate @current_assignments, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
 </span>
 
 <br />
