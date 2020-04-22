@@ -14072,3 +14072,228 @@ I, [2020-04-22T14:01:55.591472 #23692]  INFO -- :   Rendered partials/_footer.ht
 I, [2020-04-22T14:01:55.660280 #23692]  INFO -- : Completed 200 OK in 88ms (Views: 85.0ms | ActiveRecord: 0.5ms)
 
 
+I, [2020-04-22T14:05:58.884715 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:05:58 +0000
+D, [2020-04-22T14:05:58.897177 #24064] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T14:05:58.897321 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-22T14:05:58.906482 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:05:58.906696 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:05:58.923305 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:05:58.925961 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:05:58.926413 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:05:58.937955 #24064] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:05:58.938420 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:05:59.061573 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (137.9ms)
+I, [2020-04-22T14:05:59.241250 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-22T14:05:59.356945 #24064]  INFO -- : Completed 200 OK in 450ms (Views: 434.4ms | ActiveRecord: 1.3ms)
+
+
+I, [2020-04-22T14:06:28.630962 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:06:28 +0000
+I, [2020-04-22T14:06:28.713215 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:06:28.713395 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:06:28.727598 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-22T14:06:28.732593 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (4.6ms)
+I, [2020-04-22T14:06:28.734417 #24064]  INFO -- : Completed 500  in 21ms (ActiveRecord: 0.4ms)
+
+
+F, [2020-04-22T14:06:28.751381 #24064] FATAL -- : 
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/stores/index.html.erb:12:in `_app_views_stores_index_html_erb__235983273573662052_26760'
+
+I, [2020-04-22T14:06:30.063715 #24064]  INFO -- : Started POST "/__better_errors/6943a6a965e79f56/variables" for 127.0.0.1 at 2020-04-22 14:06:30 +0000
+D, [2020-04-22T14:06:30.177558 #24064] DEBUG -- :   [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.177731 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.187905 #24064] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.188036 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.192161 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.192285 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.193802 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.193922 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.194881 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.194999 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.196561 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.196705 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.306574 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.307093 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.309884 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.310082 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.351693 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.351927 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:06:30.353568 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:06:30.353881 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-22T14:08:34.730892 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:08:34 +0000
+I, [2020-04-22T14:08:34.781354 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:08:34.781535 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:08:34.790859 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:08:34.792586 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:34.792971 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-22T14:08:34.804382 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (13.2ms)
+I, [2020-04-22T14:08:34.805534 #24064]  INFO -- : Completed 500  in 24ms (ActiveRecord: 1.1ms)
+
+
+F, [2020-04-22T14:08:34.817939 #24064] FATAL -- : 
+ArgumentError - The @stores variable appears to be empty. Did you forget to pass the collection object for will_paginate?:
+  app/views/stores/index.html.erb:25:in `_app_views_stores_index_html_erb__235983273573662052_31740'
+
+I, [2020-04-22T14:08:35.816658 #24064]  INFO -- : Started POST "/__better_errors/b28c2e33f3588314/variables" for 127.0.0.1 at 2020-04-22 14:08:35 +0000
+D, [2020-04-22T14:08:35.873432 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:35.873787 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:35.878798 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:35.879140 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:35.880738 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:35.881052 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.081363 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.081700 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.117452 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.118005 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.123198 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.123687 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.124898 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.125207 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.208719 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.208999 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:08:36.251622 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:08:36.251941 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-22T14:09:56.293801 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:09:56 +0000
+I, [2020-04-22T14:09:56.340098 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:09:56.340515 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:09:56.349785 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:09:56.351732 #24064] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:09:56.352427 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:09:56.363840 #24064] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:09:56.364522 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:09:56.368034 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (17.1ms)
+I, [2020-04-22T14:09:56.384609 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.9ms)
+I, [2020-04-22T14:09:56.505681 #24064]  INFO -- : Completed 200 OK in 164ms (Views: 155.4ms | ActiveRecord: 1.1ms)
+
+
+I, [2020-04-22T14:10:14.535007 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:10:14 +0000
+I, [2020-04-22T14:10:14.537639 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:10:14.538120 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:10:14.544740 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:10:14.546579 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:10:14.547142 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:10:14.549714 #24064] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:10:14.550286 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:10:14.552174 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (7.1ms)
+I, [2020-04-22T14:10:14.567790 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-22T14:10:14.681441 #24064]  INFO -- : Completed 200 OK in 143ms (Views: 137.9ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-22T14:10:31.189993 #24064]  INFO -- : Started GET "/stores?page=2" for 127.0.0.1 at 2020-04-22 14:10:31 +0000
+I, [2020-04-22T14:10:31.192427 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:10:31.192718 #24064]  INFO -- :   Parameters: {"page"=>"2"}
+I, [2020-04-22T14:10:31.198851 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:10:31.200832 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 5]]
+D, [2020-04-22T14:10:31.201389 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-22T14:10:31.203913 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (4.7ms)
+I, [2020-04-22T14:10:31.215622 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-22T14:10:31.306988 #24064]  INFO -- : Completed 200 OK in 114ms (Views: 109.4ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-22T14:10:33.729203 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:10:33 +0000
+I, [2020-04-22T14:10:33.732978 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:10:33.733699 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:10:33.741601 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:10:33.744058 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:10:33.745015 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:10:33.749028 #24064] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:10:33.750068 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:10:33.753169 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (11.1ms)
+I, [2020-04-22T14:10:33.768941 #24064]  INFO -- :   Rendered partials/_footer.html.erb (1.2ms)
+I, [2020-04-22T14:10:33.869234 #24064]  INFO -- : Completed 200 OK in 135ms (Views: 128.6ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-22T14:11:45.019361 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:11:45 +0000
+I, [2020-04-22T14:11:45.022125 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:11:45.022436 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:11:45.027696 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:11:45.029697 #24064] DEBUG -- :   [1m[36mStore Load (0.4ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:11:45.030271 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:11:45.033135 #24064] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:11:45.033734 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:11:45.035403 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (7.4ms)
+I, [2020-04-22T14:11:45.045362 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-22T14:11:45.164357 #24064]  INFO -- : Completed 200 OK in 142ms (Views: 137.0ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-22T14:12:08.683226 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:12:08 +0000
+I, [2020-04-22T14:12:08.728525 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:12:08.728886 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:12:08.738027 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:12:08.739809 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:08.740436 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-22T14:12:08.751961 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (13.6ms)
+I, [2020-04-22T14:12:08.753250 #24064]  INFO -- : Completed 500  in 24ms (ActiveRecord: 1.0ms)
+
+
+F, [2020-04-22T14:12:08.782933 #24064] FATAL -- : 
+ArgumentError - The @stores variable appears to be empty. Did you forget to pass the collection object for will_paginate?:
+  app/views/stores/index.html.erb:25:in `_app_views_stores_index_html_erb__235983273573662052_42580'
+
+I, [2020-04-22T14:12:09.748903 #24064]  INFO -- : Started POST "/__better_errors/c8224b991a30cf6d/variables" for 127.0.0.1 at 2020-04-22 14:12:09 +0000
+D, [2020-04-22T14:12:09.799297 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.799688 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.804309 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.804572 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.805806 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.806105 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.913533 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.913862 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.964754 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.965040 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.968068 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.968300 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:09.969454 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:09.969691 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:10.060400 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:10.060640 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+D, [2020-04-22T14:12:10.100605 #24064] DEBUG -- :   [1m[36mCACHE Store Load (0.0ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" != ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:10.100849 #24064] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-22T14:12:27.128743 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:12:27 +0000
+I, [2020-04-22T14:12:27.130605 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:12:27.130926 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:12:27.136094 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:12:27.138943 #24064] DEBUG -- :   [1m[36mStore Load (0.5ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 10], ["OFFSET", 0]]
+D, [2020-04-22T14:12:27.139630 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-22T14:12:27.141962 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (5.5ms)
+I, [2020-04-22T14:12:27.151661 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-22T14:12:27.224774 #24064]  INFO -- : Completed 200 OK in 93ms (Views: 89.3ms | ActiveRecord: 0.5ms)
+
+
+I, [2020-04-22T14:13:00.537411 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:13:00 +0000
+I, [2020-04-22T14:13:00.586045 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:13:00.586234 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:13:00.595959 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:13:00.597747 #24064] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:13:00.598297 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:13:00.610034 #24064] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:13:00.610536 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:13:00.612580 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (16.2ms)
+I, [2020-04-22T14:13:00.622785 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-22T14:13:00.705571 #24064]  INFO -- : Completed 200 OK in 119ms (Views: 109.6ms | ActiveRecord: 1.3ms)
+
+
+I, [2020-04-22T14:13:03.662553 #24064]  INFO -- : Started GET "/stores?page=2" for 127.0.0.1 at 2020-04-22 14:13:03 +0000
+I, [2020-04-22T14:13:03.665409 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:13:03.665751 #24064]  INFO -- :   Parameters: {"page"=>"2"}
+I, [2020-04-22T14:13:03.669374 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:13:03.671180 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 5]]
+D, [2020-04-22T14:13:03.671788 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+I, [2020-04-22T14:13:03.678533 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (8.9ms)
+I, [2020-04-22T14:13:03.687252 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.3ms)
+I, [2020-04-22T14:13:03.755342 #24064]  INFO -- : Completed 200 OK in 89ms (Views: 86.3ms | ActiveRecord: 0.3ms)
+
+
+I, [2020-04-22T14:13:06.944490 #24064]  INFO -- : Started GET "/stores?page=1" for 127.0.0.1 at 2020-04-22 14:13:06 +0000
+I, [2020-04-22T14:13:06.945835 #24064]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-22T14:13:06.946017 #24064]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2020-04-22T14:13:06.949036 #24064]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+D, [2020-04-22T14:13:06.950768 #24064] DEBUG -- :   [1m[36mStore Load (0.3ms)[0m  [1m[34mSELECT  "stores".* FROM "stores" WHERE "stores"."active" = ? ORDER BY name LIMIT ? OFFSET ?[0m  [["active", 1], ["LIMIT", 5], ["OFFSET", 0]]
+D, [2020-04-22T14:13:06.951197 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:12
+D, [2020-04-22T14:13:06.953516 #24064] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-22T14:13:06.953947 #24064] DEBUG -- :   ↳ app/views/stores/index.html.erb:25
+I, [2020-04-22T14:13:06.955441 #24064]  INFO -- :   Rendered stores/index.html.erb within layouts/application (6.1ms)
+I, [2020-04-22T14:13:06.964442 #24064]  INFO -- :   Rendered partials/_footer.html.erb (0.4ms)
+I, [2020-04-22T14:13:07.036153 #24064]  INFO -- : Completed 200 OK in 90ms (Views: 86.6ms | ActiveRecord: 0.4ms)
+
+

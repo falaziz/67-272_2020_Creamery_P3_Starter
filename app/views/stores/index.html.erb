@@ -9,7 +9,7 @@
     <th></th>
   </tr>
 
-<% @stores.each do |store| %>
+<% @active_stores.each do |store| %>
   <tr>
     <td><%= link_to store.name, store_path(store) %></td>
     <td><%= "#{store.street}, #{store.city}, #{store.state}"  %></td>
@@ -22,7 +22,7 @@
 <br />
 <!-- Add the pagination using will_paginate gem -->
 <span class="paginate">
-<%= will_paginate @books, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
+<%= will_paginate @active_stores, :previous_label => "Previous&nbsp;", :next_label => "&nbsp;Next" %>
 </span>
 
 <br />
