@@ -20034,3 +20034,147 @@ I, [2020-04-22T16:40:38.545573 #26482]  INFO -- :   Rendered partials/_footer.ht
 I, [2020-04-22T16:40:38.615838 #26482]  INFO -- : Completed 200 OK in 248ms (Views: 107.1ms | ActiveRecord: 5.4ms)
 
 
+D, [2020-04-22T17:10:21.370728 #4248] DEBUG -- :   [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:10:21.370965 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.373020 #4248] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:10:21.373224 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.375305 #4248] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:10:21.375486 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.391858 #4248] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:10:21.392216 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+I, [2020-04-22T17:10:21.392600 #4248]  INFO -- : Migrating to CreateAssignments (20191101143940)
+D, [2020-04-22T17:10:21.395556 #4248] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:10:21.395793 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.404093 #4248] DEBUG -- :   [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "assignments"[0m
+D, [2020-04-22T17:10:21.404206 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.406981 #4248] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Destroy (0.2ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20191101143940"]]
+D, [2020-04-22T17:10:21.407152 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.412745 #4248] DEBUG -- :   [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:10:21.412912 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:10:21.415478 #4248] DEBUG -- :   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:10:21.415709 #4248] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/bin/rake:23
+D, [2020-04-22T17:18:27.844251 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:18:27.844560 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.844886 #5118]  INFO -- : Migrating to CreateAssignments (20191101143940)
+D, [2020-04-22T17:18:27.845816 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.845999 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.847116 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+D, [2020-04-22T17:18:27.847346 #5118] DEBUG -- :   ↳ db/migrate/20191101143940_create_assignments.rb:3
+D, [2020-04-22T17:18:27.849620 #5118] DEBUG -- :   [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "assignments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "store_id" integer NOT NULL, "employee_id" integer NOT NULL, "start_date" date, "end_date" date, CONSTRAINT "fk_rails_75f2a1d3e5"
+FOREIGN KEY ("store_id")
+  REFERENCES "stores" ("id")
+, CONSTRAINT "fk_rails_d0980e430f"
+FOREIGN KEY ("employee_id")
+  REFERENCES "employees" ("id")
+)[0m
+D, [2020-04-22T17:18:27.849939 #5118] DEBUG -- :   ↳ db/migrate/20191101143940_create_assignments.rb:3
+D, [2020-04-22T17:18:27.851408 #5118] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_assignments_on_store_id" ON "assignments" ("store_id")[0m
+D, [2020-04-22T17:18:27.851610 #5118] DEBUG -- :   ↳ db/migrate/20191101143940_create_assignments.rb:3
+D, [2020-04-22T17:18:27.853718 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_assignments_on_employee_id" ON "assignments" ("employee_id")[0m
+D, [2020-04-22T17:18:27.853922 #5118] DEBUG -- :   ↳ db/migrate/20191101143940_create_assignments.rb:3
+D, [2020-04-22T17:18:27.856823 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20191101143940"]]
+D, [2020-04-22T17:18:27.857028 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.861729 #5118] DEBUG -- :   [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.861911 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.862294 #5118]  INFO -- : Migrating to AddUsernameToEmployees (20200422170613)
+D, [2020-04-22T17:18:27.863371 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.863616 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.864634 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "employees" ADD "username" varchar[0m
+D, [2020-04-22T17:18:27.864908 #5118] DEBUG -- :   ↳ db/migrate/20200422170613_add_username_to_employees.rb:3
+D, [2020-04-22T17:18:27.865919 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422170613"]]
+D, [2020-04-22T17:18:27.866227 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.870213 #5118] DEBUG -- :   [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.870563 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.870913 #5118]  INFO -- : Migrating to AddPasswordToEmployee (20200422170651)
+D, [2020-04-22T17:18:27.872052 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.872229 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.873402 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "employees" ADD "password_digest" varchar[0m
+D, [2020-04-22T17:18:27.873598 #5118] DEBUG -- :   ↳ db/migrate/20200422170651_add_password_to_employee.rb:3
+D, [2020-04-22T17:18:27.874641 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422170651"]]
+D, [2020-04-22T17:18:27.874870 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.877858 #5118] DEBUG -- :   [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.878087 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.878428 #5118]  INFO -- : Migrating to CreatePayGrades (20200422171207)
+D, [2020-04-22T17:18:27.879518 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.879678 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.880844 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "pay_grades" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "level" varchar, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2020-04-22T17:18:27.881031 #5118] DEBUG -- :   ↳ db/migrate/20200422171207_create_pay_grades.rb:3
+D, [2020-04-22T17:18:27.882112 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171207"]]
+D, [2020-04-22T17:18:27.882288 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.886096 #5118] DEBUG -- :   [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.886274 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.886596 #5118]  INFO -- : Migrating to CreatePayGradeRates (20200422171331)
+D, [2020-04-22T17:18:27.887581 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.887826 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.889032 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "pay_grade_rates" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "pay_grade_id" integer, "rate" float, "start_date" date, "end_date" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_32ff5b15b2"
+FOREIGN KEY ("pay_grade_id")
+  REFERENCES "pay_grades" ("id")
+)[0m
+D, [2020-04-22T17:18:27.889363 #5118] DEBUG -- :   ↳ db/migrate/20200422171331_create_pay_grade_rates.rb:3
+D, [2020-04-22T17:18:27.890644 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_pay_grade_rates_on_pay_grade_id" ON "pay_grade_rates" ("pay_grade_id")[0m
+D, [2020-04-22T17:18:27.890911 #5118] DEBUG -- :   ↳ db/migrate/20200422171331_create_pay_grade_rates.rb:3
+D, [2020-04-22T17:18:27.892057 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171331"]]
+D, [2020-04-22T17:18:27.892299 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.895451 #5118] DEBUG -- :   [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.895708 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.895979 #5118]  INFO -- : Migrating to CreateShifts (20200422171500)
+D, [2020-04-22T17:18:27.897047 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.897340 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.898546 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "shifts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "assignment_id" integer, "date" date, "start_time" time, "end_time" time, "notes" text, "status" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_76d81d489d"
+FOREIGN KEY ("assignment_id")
+  REFERENCES "assignments" ("id")
+)[0m
+D, [2020-04-22T17:18:27.898754 #5118] DEBUG -- :   ↳ db/migrate/20200422171500_create_shifts.rb:3
+D, [2020-04-22T17:18:27.900111 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shifts_on_assignment_id" ON "shifts" ("assignment_id")[0m
+D, [2020-04-22T17:18:27.900306 #5118] DEBUG -- :   ↳ db/migrate/20200422171500_create_shifts.rb:3
+D, [2020-04-22T17:18:27.901333 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171500"]]
+D, [2020-04-22T17:18:27.901592 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.908734 #5118] DEBUG -- :   [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.908862 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.909087 #5118]  INFO -- : Migrating to CreateJobs (20200422171603)
+D, [2020-04-22T17:18:27.909742 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.909830 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.911209 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "jobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "description" text, "active" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+D, [2020-04-22T17:18:27.911432 #5118] DEBUG -- :   ↳ db/migrate/20200422171603_create_jobs.rb:3
+D, [2020-04-22T17:18:27.913443 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171603"]]
+D, [2020-04-22T17:18:27.913733 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.917904 #5118] DEBUG -- :   [1m[35m (3.6ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.918020 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.918346 #5118]  INFO -- : Migrating to CreateShiftJobs (20200422171638)
+D, [2020-04-22T17:18:27.919436 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.919714 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.921356 #5118] DEBUG -- :   [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "shift_jobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "shift_id" integer, "job_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_1acf410dc2"
+FOREIGN KEY ("shift_id")
+  REFERENCES "shifts" ("id")
+, CONSTRAINT "fk_rails_9b5c3662fc"
+FOREIGN KEY ("job_id")
+  REFERENCES "jobs" ("id")
+)[0m
+D, [2020-04-22T17:18:27.921458 #5118] DEBUG -- :   ↳ db/migrate/20200422171638_create_shift_jobs.rb:3
+D, [2020-04-22T17:18:27.923217 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shift_jobs_on_shift_id" ON "shift_jobs" ("shift_id")[0m
+D, [2020-04-22T17:18:27.923419 #5118] DEBUG -- :   ↳ db/migrate/20200422171638_create_shift_jobs.rb:3
+D, [2020-04-22T17:18:27.925770 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_shift_jobs_on_job_id" ON "shift_jobs" ("job_id")[0m
+D, [2020-04-22T17:18:27.925954 #5118] DEBUG -- :   ↳ db/migrate/20200422171638_create_shift_jobs.rb:3
+D, [2020-04-22T17:18:27.927450 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171638"]]
+D, [2020-04-22T17:18:27.927668 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.932977 #5118] DEBUG -- :   [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.933084 #5118] DEBUG -- :   ↳ bin/rails:9
+I, [2020-04-22T17:18:27.933340 #5118]  INFO -- : Migrating to AddPaygradeToAssignments (20200422171813)
+D, [2020-04-22T17:18:27.934459 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.934692 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.936185 #5118] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "assignments" ADD "pay_grade_id" integer[0m
+D, [2020-04-22T17:18:27.936279 #5118] DEBUG -- :   ↳ db/migrate/20200422171813_add_paygrade_to_assignments.rb:3
+D, [2020-04-22T17:18:27.939284 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_assignments_on_pay_grade_id" ON "assignments" ("pay_grade_id")[0m
+D, [2020-04-22T17:18:27.939553 #5118] DEBUG -- :   ↳ db/migrate/20200422171813_add_paygrade_to_assignments.rb:3
+D, [2020-04-22T17:18:27.940903 #5118] DEBUG -- :   [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200422171813"]]
+D, [2020-04-22T17:18:27.943028 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.947413 #5118] DEBUG -- :   [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.947561 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.950035 #5118] DEBUG -- :   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+D, [2020-04-22T17:18:27.950143 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.955022 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+D, [2020-04-22T17:18:27.955129 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.955952 #5118] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+D, [2020-04-22T17:18:27.956053 #5118] DEBUG -- :   ↳ bin/rails:9
+D, [2020-04-22T17:18:27.957467 #5118] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-22T17:18:27.959111 #5118] DEBUG -- :   ↳ bin/rails:9
