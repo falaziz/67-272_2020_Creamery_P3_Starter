@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   resources :assignments
   
   get '/assignments/terminate', to: 'assignments#terminate'
+  get 'login' => 'sessions#new', :as => :login
+  get 'logout' => 'sessions#destroy', :as => :logout
   
   root to: "employees#index", as: :home
 
