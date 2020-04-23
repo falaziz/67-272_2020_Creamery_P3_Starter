@@ -6,8 +6,8 @@ class Shift < ApplicationRecord
   has_many :jobs, through: :shift_jobs
   
   # Scopes
-  scope :completed,       -> { where('end_time IS NOT NULL') }
-  scope :incomplete,          -> { where('end_time IS NULL') }
+  scope :completed,       -> { joins(:shift_job).where('job_id IS NOT NULL') }
+  scope :incomplete,          -> { joins(:shift_job).where('job_id IS NULL') }
   scope :by_store,      -> { joins(:store).order('name') }
   scope :by_employee,   -> { joins(:employee).order('last_name, first_name') }
   scope :chronological, -> { order('date ASC, start_time ASC') }
@@ -21,6 +21,7 @@ class Shift < ApplicationRecord
   scope :for_employee,  ->(employee) { joins(:employee).where("employee_id = ?", employee.id) }
   scope :for_next_days,  ->(x) { where("date >= ? AND date <= ?", Date.current, Date.current + x) }
   scope :for_past_days,  ->(x) { where("date < ? AND date >= ?", Date.current, x.days.ago.to_date) }
+  scope :for_dates,  ->(x, y) { where("date < ? AND date >= ?", x, y) }
   
   # Validations
   validates_presence_of :assignment_id
