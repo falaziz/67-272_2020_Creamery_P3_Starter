@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :shift_job do
-    shift { nil }
-    job { nil }
+    association :shift
+    association :job
   end
 end

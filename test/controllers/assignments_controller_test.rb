@@ -37,7 +37,7 @@ class AssignmentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should terminate assignment" do
     assert_nil @assignment.end_date
-    patch terminate_assignment_path(@assignment)
+    patch assignments_terminate_path(@assignment)
     @assignment.reload
     assert_equal Date.current, @assignment.end_date
     assert_redirected_to assignments_path

@@ -3,6 +3,8 @@ class Assignment < ApplicationRecord
   # Relationships
   belongs_to :store
   belongs_to :employee
+  belongs_to :pay_grade
+  has_many :shifts
 
   # Scopes
   scope :current,       -> { where('end_date IS NULL') }
@@ -14,6 +16,7 @@ class Assignment < ApplicationRecord
   scope :for_employee,  ->(employee) { where("employee_id = ?", employee.id) }
   scope :for_role,      ->(role) { joins(:employee).where("role = ?", role) }
   scope :for_date,      ->(date) { where("start_date <= ? AND (end_date > ? OR end_date IS NULL)", date, date) }
+  scope :for_pay_grade,  ->(pay_grade) { where("pay_grade_id = ?", pay_grade.id) }
 
   # Validations
   validates_presence_of :store_id, :employee_id, :start_date
@@ -25,7 +28,7 @@ class Assignment < ApplicationRecord
   # Other methods
   def terminate
     return false unless self.end_date.nil?
-    self.start_date = Date.current
+    self.end_date = Date.current
     end_previous_assignment
     self.reload
   end
