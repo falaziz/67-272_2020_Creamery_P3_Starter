@@ -5,8 +5,8 @@ class EmployeeTest < ActiveSupport::TestCase
   should have_many(:assignments)
   should have_many(:stores).through(:assignments)
   should have_many(:shifts).through(:assignments)
-  should have_many(:pay_grades).through(:assignments)
   should have_many(:pay_grade_rates).through(:pay_grades)
+  should have_many(:pay_grades).through(:assignments)
   should have_secure_password
 
   # Test basic validations

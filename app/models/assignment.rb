@@ -19,7 +19,7 @@ class Assignment < ApplicationRecord
   scope :for_pay_grade,  ->(pay_grade) { where("pay_grade_id = ?", pay_grade.id) }
 
   # Validations
-  validates_presence_of :store_id, :employee_id, :start_date
+  validates_presence_of :store_id, :employee_id, :start_date, :pay_grade_id
   validates_date :start_date, on_or_before: ->{ Date.current }, on_or_before_message: "cannot be in the future"
   validates_date :end_date, after: :start_date, on_or_before: ->{ Date.current }, allow_blank: true
   validate :employee_is_active_in_system
