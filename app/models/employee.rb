@@ -54,6 +54,13 @@ class Employee < ApplicationRecord
   validates_format_of :ssn, with: /\A\d{3}[- ]?\d{2}[- ]?\d{4}\z/, message: 'should be 9 digits and delimited with dashes only'
   validates_uniqueness_of :ssn, :username
   validates_inclusion_of :role, in: %w[admin manager employee], message: 'is not an option'
+  
+  validates_uniqueness_of :username, case_sensitive: false
+  validates_presence_of :password, :on =>:create
+  validates_presence_of :password_confirmation, :on =>:create
+  validates_confirmation_of :password, message: "does not match"
+  validates_length_of :password, :minimum =>4, message: "at least 4 characters long", :allow_blank => true
+  
 
   # Other methods
   def name
@@ -90,6 +97,16 @@ class Employee < ApplicationRecord
 
   def certify_autograde
     return -3554384015922413861
+  end
+  
+  # Aunthetication Methods
+  def self.authenticate(username, password)
+    find_by_username(username).try(:authenticate, password)
+  end
+  
+  def role?(authorized_role)
+    return false if role.nil?
+    role.to_sym == authorized_role
   end
 
   ROLES_LIST = [['Employee', 'employee'],['Manager', 'manager'],['Administrator', 'admin']].freeze

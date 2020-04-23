@@ -23,7 +23,7 @@ class AbilityTest < ActiveSupport::TestCase
       deny @kathryn_ability.can? :show, @cmu
       deny @kathryn_ability.can? :create, Store
       deny @kathryn_ability.can? :update, Store
-
+      
       assert @kathryn_ability.can? :index, Assignment
       assert @kathryn_ability.can? :show, @assign_ralph
       deny @kathryn_ability.can? :show, @assign_cindy
